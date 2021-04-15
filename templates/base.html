@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}" type='text/css'>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" SameSite=None></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script src="{{ url_for('static', filename= 'pagination.js') }}"></script>
+    {% block scripts %}{% endblock %}
+    <title>{% block title %}{{ _("Página inicial") }}{% endblock %} | {{ _("Wiki Museu do Ipiranga - O que retrata?") }}</title>
+    <script>
+        function menuFunction() {
+            var x = document.getElementById("topnavbar");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</head>
+<body style="height: 100%">
+{% block navbar %}{% endblock %}
+<main class="w3-container" id="content" style="min-height:85vh;overflow: auto;padding: 0">
+    {% block banner %}
+        <div class="w3-container w3-quarter"></div>
+        <h1 class="w3-container w3-half" style="text-align: center; padding-top:60px; padding-bottom:60px">
+            {% if lang=="en" %}
+                <img class="banner" src="{{ url_for('static', filename= 'logo - en.svg') }}" alt='{{ _("Logotipo Wiki Museu do Ipiranga - O que retrata?") }}' width="100%"/>
+            {% else %}
+                <img class="banner" src="{{ url_for('static', filename= 'logo - pt.svg') }}" alt='{{ _("Logotipo Wiki Museu do Ipiranga - O que retrata?") }}' width="100%"/>
+            {% endif %}
+        </h1>
+    {% endblock %}
+    {% block content %}{% endblock %}
+</main>
+<footer style="text-align:left;position: relative;padding: 0px 15px 0px 15px" id="footer">
+    <hr>
+    <p style="font-size:90%; text-align: justify">
+        {% set projeto %}<a tabindex="0" target='_blank' aria-label='{{_("Projeto Novo Museu do Ipiranga")}}' href='https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:GLAM/Museu_Paulista#Projeto_Novo_Museu_do_Ipiranga'>{{_("Projeto Novo Museu do Ipiranga")}}</a>{% endset %}
+        {{_("<i>Wiki Museu do Ipiranga - O que retrata?</i> é um aplicativo desenvolvido no contexto do <i><b>%(projeto)s</b></i>, organizado pelo <b>Grupo de Usuários Wiki Movimento Brasil</b> e o <b>Museu do Ipiranga</b>, em parceria com a <b>Fundação Banco do Brasil</b> e com realização da <b>Universidade de São Paulo</b> e da <b>Fundação de Apoio à Universidade de São Paulo</b>.", projeto=projeto)}}
+    </p>
+</footer>
+</body>
+</html>

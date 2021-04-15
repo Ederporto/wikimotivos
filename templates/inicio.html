@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% with lang=lang, username=username %}
+        {% include 'topnavbar.html' %}
+    {% endwith %}
+{% endblock %}
+
+{% block title %}{{ _("Página inicial") }}{% endblock %}
+
+{% block banner %}
+    <div class="w3-row">
+        <div class="w3-container w3-quarter"></div>
+        <h1 class="w3-container w3-half" style="text-align: center; padding-top:60px; padding-bottom:60px">
+            {% if lang=="en" %}
+                <img class="banner" src="{{ url_for('static', filename= 'logo - en.svg') }}" alt='{{ _("Logotipo Wiki Museu do Ipiranga") }}' width="100%"/>
+            {% else %}
+                <img class="banner" src="{{ url_for('static', filename= 'logo - pt.svg') }}" alt='{{ _("Logotipo Wiki Museu do Ipiranga") }}' width="100%"/>
+            {% endif %}
+        </h1>
+    </div>
+    <div class="w3-row">
+        <div class="w3-container w3-quarter"></div>
+        <div class="w3-container w3-half">
+            <h2 style="text-align:center; padding-bottom:30px;">
+                {{ _("Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - O que retrata?</i>")}}
+            </h2>
+            <h3 style="text-align:center; padding-bottom:30px;">
+                {{_("Neste aplicativo, você participa do trabalho de pesquisa do Museu do Ipiranga. Sua tarefa: ")}} {{_("Identificar os <a target=\"_blank\" title=\"motivo (artes plásticas)\" href=\"https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)\">motivos</a> retratados nos objetos do acervo do Museu do Ipiranga")}}. {{_("Para participar, é preciso autenticar-se; depois, escolha uma categoria abaixo para começar.")}}
+            </h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="w3-container w3-quarter"></div>
+    <div class="w3-container w3-half">
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='roupas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Roupas') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='bonecas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Bonecas') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='brinquedos') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Brinquedos') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='cozinha') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Cozinha') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='mobiliario') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Mobiliário') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='ornamentos') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Ornamentos') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='vasos') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Vasos') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='textil') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Têxtil') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='iluminacao') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Iluminação') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='escritorio') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Escritório') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='esculturas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Esculturas') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='ferramentas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Ferramentas') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='miscelânea') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Miscelânea') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

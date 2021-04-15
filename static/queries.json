@@ -1,0 +1,105 @@
+{
+  "roupas":{
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q11460 wd:Q198763 wd:Q17152912 wd:Q1146363 wd:Q212989 wd:Q22676 wd:Q161928} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Clothes",
+      "pt-br": "Roupas"
+    }
+  },
+  "bonecas":{
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q168658 wd:Q44201312} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Dolls",
+      "pt-br": "Bonecas"
+    }
+  },
+  "brinquedos": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q11422 wd:Q11410 wd:Q22937791} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Toys",
+      "pt-br": "Brinquedos"
+    }
+  },
+  "cozinha": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q613972 wd:Q245005 wd:Q7724780 wd:Q81707 wd:Q81727 wd:Q1422576 wd:Q5716 wd:Q3235198 wd:Q848532} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Kitchen",
+      "pt-br": "Cozinha"
+    }
+  },
+  "mobiliario": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q15026 wd:Q14745} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Furniture",
+      "pt-br": "Mobiliário"
+    }
+  },
+  "ornamentos": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q335261} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Ornaments",
+      "pt-br": "Ornamentos"
+    }
+  },
+  "vasos": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q178401 wd:Q2932508 wd:Q2990690 wd:Q105172435 wd:Q191851} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Vases",
+      "pt-br": "Vasos"
+    }
+  },
+  "textil": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q63248965 wd:Q49005 wd:Q63411043 wd:Q131696} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Textile",
+      "pt-br": "Têxtil"
+    }
+  },
+  "iluminacao": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q815738 wd:Q210064} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Lighting",
+      "pt-br": "Iluminação"
+    }
+  },
+  "escritorio": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q2383811} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Office",
+      "pt-br": "Escritório"
+    }
+  },
+  "esculturas": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q860861 wd:Q179700} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Sculptures",
+      "pt-br": "Esculturas"
+    }
+  },
+  "ferramentas": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q16798631 wd:Q61755099 wd:Q768186 wd:Q39546} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
+    "descriptor": {
+      "en": "Tools",
+      "pt-br": "Ferramentas"
+    }
+  },
+  "miscelânea": {
+    "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { ?item wdt:P195 wd:Q56677470; wdt:P31 ?instancia; wdt:P18 ?imagem_; schema:dateModified ?date_modified. MINUS { ?item wdt:P31 wd:Q125191. } MINUS { ?item wdt:P31 wd:Q3305213. } MINUS { ?item wdt:P31 wd:Q162827. } MINUS { ?item wdt:P31 wd:Q18965. } MINUS { ?item wdt:P31 wd:Q11034. } MINUS { ?item wdt:P31 wd:Q192425. } MINUS { ?item wdt:P31 wd:Q1572315. } MINUS { ?item wdt:P31 wd:Q4006. } MINUS { ?item wdt:P31 wd:Q11060274. } MINUS { ?item wdt:P31 wd:Q216526. } MINUS { ?item wdt:P31 wd:Q2668072. } MINUS { ?item wdt:P31 wd:Q93184. } MINUS { ?item wdt:P31 wd:Q8011558. } MINUS { ?item wdt:P31 wd:Q49848. } MINUS { ?item wdt:P31 wd:Q23013246. } MINUS { ?item wdt:P31 wd:Q488053. } MINUS { ?item wdt:P31 wd:Q1261026. } MINUS { ?item wdt:P31 wd:Q595597. } MINUS { ?item wdt:P31 wd:Q18573970. } MINUS { ?item wdt:P31 wd:Q1156791. } MINUS { ?item wdt:P31 wd:Q1155772. } MINUS { ?item wdt:P31 wd:Q1027879. } MINUS { ?item wdt:P31 wd:Q193955. } MINUS { ?item wdt:P31 wd:Q11460. } MINUS { ?item wdt:P31 wd:Q198763. } MINUS { ?item wdt:P31 wd:Q17152912. } MINUS { ?item wdt:P31 wd:Q1146363. } MINUS { ?item wdt:P31 wd:Q212989. } MINUS { ?item wdt:P31 wd:Q22676. } MINUS { ?item wdt:P31 wd:Q161928. } MINUS { ?item wdt:P31 wd:Q2383811. } MINUS { ?item wdt:P31 wd:Q3300034. } MINUS { ?item wdt:P31 wd:Q39546. } MINUS { ?item wdt:P31 wd:Q2041172. } MINUS { ?item wdt:P31 wd:Q43013. } MINUS { ?item wdt:P31 wd:Q11422. } MINUS { ?item wdt:P31 wd:Q11410. } MINUS { ?item wdt:P31 wd:Q22937791. } MINUS { ?item wdt:P31 wd:Q168658. } MINUS { ?item wdt:P31 wd:Q44201312. } MINUS { ?item wdt:P31 wd:Q628403. } MINUS { ?item wdt:P31 wd:Q613972. } MINUS { ?item wdt:P31 wd:Q245005. } MINUS { ?item wdt:P31 wd:Q7724780. } MINUS { ?item wdt:P31 wd:Q81707. } MINUS { ?item wdt:P31 wd:Q81727. } MINUS { ?item wdt:P31 wd:Q1422576. } MINUS { ?item wdt:P31 wd:Q57216. } MINUS { ?item wdt:P31 wd:Q3235198. } MINUS { ?item wdt:P31 wd:Q848532. } MINUS { ?item wdt:P31 wd:Q860861. } MINUS { ?item wdt:P31 wd:Q179700. } MINUS { ?item wdt:P31 wd:Q16798631. } MINUS { ?item wdt:P31 wd:Q61755099. } MINUS { ?item wdt:P31 wd:Q768186. } MINUS { ?item wdt:P31 wd:Q815738. } MINUS { ?item wdt:P31 wd:Q210064. } MINUS { ?item wdt:P31 wd:Q16406. } MINUS { ?item wdt:P31 wd:Q1757562. } MINUS { ?item wdt:P31 wd:Q15026. } MINUS { ?item wdt:P31 wd:Q14745. } MINUS { ?item wdt:P31 wd:Q335261. } MINUS { ?item wdt:P31 wd:Q63248965. } MINUS { ?item wdt:P31 wd:Q49005. } MINUS { ?item wdt:P31 wd:Q63411043. } MINUS { ?item wdt:P31 wd:Q131696. } MINUS { ?item wdt:P31 wd:Q178401. } MINUS { ?item wdt:P31 wd:Q2932508. } MINUS { ?item wdt:P31 wd:Q2990690. } MINUS { ?item wdt:P31 wd:Q105172435. } MINUS { ?item wdt:P31 wd:Q191851. } SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.}} GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY ASC(?date_modified)",
+    "descriptor": {
+      "en": "Miscellanea",
+      "pt-br": "Miscelânea"
+    }
+  },
+  "Metadados": {
+    "query": "SELECT DISTINCT ?obra ?obra_label ?obra_descr ?category ?numero_de_inventario (GROUP_CONCAT(DISTINCT CONCAT(?instancia_qid, '@', ?instancia_label); SEPARATOR = ';') AS ?instancia) (GROUP_CONCAT(DISTINCT CONCAT(?criador_qid, '@', ?criador_label); SEPARATOR = ';') AS ?criador) (GROUP_CONCAT(DISTINCT CONCAT(?material_qid, '@', ?material_label); SEPARATOR = ';') AS ?material) (GROUP_CONCAT(DISTINCT CONCAT(?encomendador_qid, '@', ?encomendador_label); SEPARATOR = ';') AS ?encomendador) (GROUP_CONCAT(DISTINCT CONCAT(?metodo_qid, '@', ?metodo_label); SEPARATOR = ';') AS ?metodo) (GROUP_CONCAT(DISTINCT CONCAT(?colecao_qid, '@', ?colecao_label); SEPARATOR = ';') AS ?colecao) (GROUP_CONCAT(DISTINCT CONCAT(STR(?altura_), '@', STR(?unit_a)); SEPARATOR = ';') AS ?altura) (GROUP_CONCAT(DISTINCT CONCAT(STR(?largura_), '@', STR(?unit_l)); SEPARATOR = ';') AS ?largura) (SAMPLE(?imagem) AS ?imagem) (SAMPLE(?audio) AS ?audio) (SAMPLE(?data) AS ?data) WHERE { SERVICE wikibase:label { bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?instancia_ rdfs:label ?instancia_label. ?criador_ rdfs:label ?criador_label. ?obra rdfs:label ?obra_label; schema:description ?obra_descr. ?material_ rdfs:label ?material_label. ?encomendador_ rdfs:label ?encomendador_label. ?metodo_ rdfs:label ?metodo_label. ?colecao_ rdfs:label ?colecao_label. ?retrata_ rdfs:label ?retrata_label. } BIND(wd:QIDDAOBRA AS ?obra) OPTIONAL { ?obra wdt:P18 ?imagem_. } BIND(IF(BOUND(?imagem_), REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', ''), 'Calaamad suaal.png') AS ?imagem) OPTIONAL { ?obra wdt:P989 ?audio_. BIND(REPLACE(wikibase:decodeUri(STR(?audio_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?audio) } OPTIONAL { ?obra wdt:P31 ?instancia_. BIND(SUBSTR(STR(?instancia_), 32 ) AS ?instancia_qid) } OPTIONAL { ?obra wdt:P170 ?criador_. BIND(SUBSTR(STR(?criador_), 32 ) AS ?criador_qid) } OPTIONAL { ?obra wdt:P571 ?data_; (p:P571/psv:P571) ?data_aux. ?data_aux wikibase:timeValue ?data_value; wikibase:timePrecision ?data_precision. BIND(CONCAT(STR(YEAR(?data_value)), '-', STR(MONTH(?data_value)), '-', STR(DAY(?data_value)), '-', STR(?data_precision)) AS ?data) } OPTIONAL { ?obra wdt:P186 ?material_. BIND(SUBSTR(STR(?material_), 32 ) AS ?material_qid) } OPTIONAL { ?obra wdt:P88 ?encomendador_. BIND(SUBSTR(STR(?encomendador_), 32 ) AS ?encomendador_qid) } OPTIONAL { ?category_ schema:about ?obra; schema:isPartOf <https://commons.wikimedia.org/>. BIND(wikibase:decodeUri(SUBSTR(STR(?category_), 36 )) AS ?category) } OPTIONAL { ?obra p:P2048 ?altura_aux.  OPTIONAL {?altura_aux pq:P518 ?aplica_a.} FILTER(?aplica_a!=wd:Q860792||!BOUND(?aplica_a)) ?altura_aux psv:P2048 ?altura_psv. ?altura_psv wikibase:quantityAmount ?altura_. ?altura_psv wikibase:quantityUnit ?unit_a_. BIND(SUBSTR(STR(?unit_a_), 32 ) AS ?unit_a)  ?obra p:P2049 ?largura_aux. OPTIONAL {?largura_aux pq:P518 ?aplica_l.} FILTER(?aplica_l!=wd:Q860792||!BOUND(?aplica_l)) ?largura_aux psv:P2049 ?largura_psv. ?largura_psv wikibase:quantityAmount ?largura_. ?largura_psv wikibase:quantityUnit ?unit_l_. BIND(SUBSTR(STR(?unit_l_), 32 ) AS ?unit_l) } OPTIONAL { ?obra wdt:P2079 ?metodo_. BIND(SUBSTR(STR(?metodo_), 32 ) AS ?metodo_qid) } OPTIONAL { ?obra wdt:P217 ?numero_de_inventario. } OPTIONAL { ?obra wdt:P195 ?colecao_. BIND(SUBSTR(STR(?colecao_), 32 ) AS ?colecao_qid) } } GROUP BY ?obra ?obra_label ?obra_descr ?category ?numero_de_inventario"
+  },
+  "Motivos": {
+    "query": "SELECT DISTINCT ?retrata_stat_id ?retrata_qid ?retrata_label ?retrata_descr WHERE { BIND(wd:QIDDAOBRA AS ?item) SERVICE wikibase:label {bd:serviceParam wikibase:language \"LANGUAGE,pt-br,pt,en,es,fr,de\". ?retrata rdfs:label ?retrata_label; schema:description ?retrata_descr.} OPTIONAL {?item p:P180 ?retrata_aux. ?retrata_aux ps:P180 ?retrata_. OPTIONAL {?retrata_aux pq:P3831 ?hasfunction} BIND(SUBSTR(STR(?retrata_aux), 42 ) AS ?retrata_stat_id) BIND(SUBSTR(STR(?retrata_), 32 ) AS ?retrata_qid) BIND(IF(ISBLANK(?retrata_), IF(\"LANGUAGE\" = \"en\", \"unknown motif\", \"motivo desconhecido\"), ?retrata_) AS ?retrata) } } ORDER BY DESC(?hasfunction)"
+  },
+  "Quantidade_de_objetos": {
+    "query": "SELECT (COUNT(DISTINCT(?item)) AS ?number_works) WHERE { ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem. MINUS { ?item wdt:P31 wd:Q125191. } MINUS { ?item wdt:P31 wd:Q3305213. } MINUS { ?item wdt:P31 wd:Q18965. } MINUS { ?item wdt:P31 wd:Q11034. } MINUS { ?item wdt:P31 wd:Q192425. } MINUS { ?item wdt:P31 wd:Q1572315. } MINUS { ?item wdt:P31 wd:Q4006. } MINUS { ?item wdt:P31 wd:Q11060274. } MINUS { ?item wdt:P31 wd:Q216526. } MINUS { ?item wdt:P31 wd:Q2668072. } MINUS { ?item wdt:P31 wd:Q93184. } MINUS { ?item wdt:P31 wd:Q8011558. } MINUS { ?item wdt:P31 wd:Q49848. } MINUS { ?item wdt:P31 wd:Q23013246. } MINUS { ?item wdt:P31 wd:Q488053. } MINUS { ?item wdt:P31 wd:Q1261026. } MINUS { ?item wdt:P31 wd:Q595597. } MINUS { ?item wdt:P31 wd:Q43013. } MINUS { ?item wdt:P31 wd:Q18573970. } MINUS { ?item wdt:P31 wd:Q628403. } MINUS { ?item wdt:P31 wd:Q1156791. } MINUS { ?item wdt:P31 wd:Q1155772. } MINUS { ?item wdt:P31 wd:Q1027879. } MINUS { ?item wdt:P31 wd:Q162827. } }"
+  },
+  "Next_qid": {
+    "query": "SELECT ?obra_next_qid WHERE { BIND(wd:QIDDAOBRA AS ?obra) ?obra wdt:P31 ?instancia. ?obra_next wdt:P195 wd:Q56677470; wdt:P18 []; wdt:P31 ?instancia; schema:dateModified ?date_modified. FILTER(?obra_next!=?obra) BIND(SUBSTR(STR(?obra_next),32) AS ?obra_next_qid) } ORDER BY ASC(?date_modified) LIMIT 50"
+  }
+}

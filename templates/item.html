@@ -1,0 +1,531 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% with lang=lang, username=username %}
+        {% include 'topnavbar.html' %}
+    {% endwith %}
+{% endblock %}
+
+{% block title %}{% if metadata.obra_label %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}
+{% endif %}{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename= 'jquery.zoom.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="w3-row">
+        <div id="image" class="w3-container w3-half">
+            {% if category_images|length > 0 %}
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        {% for n in range(category_images|length-1) %}
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ n + 1 }}"></li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="image_item" style="max-width: 100%"
+                                 alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %} - {{ category_images[0] }}"
+                                 src="https://commons.wikimedia.org/wiki/Special:FilePath/{{ category_images[0] }}?width=1000px">
+                        </div>
+                        {% for imagem_categoria in category_images[1:] %}
+                            <div class="carousel-item">
+                                <img class="image_item d-block w-100" style="max-width: 100%"
+                                     alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %} - {{ imagem_categoria }}"
+                                     src="https://commons.wikimedia.org/wiki/Special:FilePath/{{ imagem_categoria }}?width=2000px">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev button" href="#carouselExampleIndicators" role="button"
+                       data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">{{ "Anterior" }}</span>
+                    </a>
+                    <a class="carousel-control-next button" href="#carouselExampleIndicators" role="button"
+                       data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">{{ "Próxima" }}</span>
+                    </a>
+                </div>
+                <a target="_blank" href="https://commons.wikimedia.org/wiki/{{ metadata.category }}">
+                    {{ _("Veja as imagens desse objeto no Wikimedia Commons") }}
+                </a>
+            {% else %}
+                <img class="image_item" alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %}"
+                     style="max-width: 100%"
+                     src="https://commons.wikimedia.org/wiki/Special:FilePath/{{ metadata.imagem[0] }}?width=2000px">
+                {% if metadata.imagem[0]!="Calaamad suaal.png" %}
+                    <a target="_blank"
+                       href="https://commons.wikimedia.org/wiki/Special:FilePath/{{ metadata.imagem[0] }}">
+                        {{ _("Veja essa imagem no Wikimedia Commons") }}
+                    </a>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div id="metadata" class="w3-container w3-half">
+            {% if not username %}
+                <h2 style="text-align:center">
+                    {{ _("Faça a sua autenticação clicando no botão 'Autenticar-se' no canto superior direito") }}
+                </h2>
+            {% endif %}
+            <table class="table table-responsive table-striped"
+                   style="overflow: hidden; font-size: 125%; width: 100%; table-layout: fixed; overflow-wrap: break-word;">
+                <tr>
+                    <th>{{ _("Objeto") }}</th>
+                    <td><a tabindex="0" target="_blank"
+                           href="https://www.wikidata.org/wiki/{{ metadata.obra_qid[0] }}">{{ metadata.obra_label[0] }}</a>
+                    </td>
+                </tr>
+                {% if metadata.instancia %}
+                    <tr>
+                        <th>{{ _("Instância de") }}</th>
+                        <td>
+                            {% for elem in metadata.instancia %}
+                                {% set elem_parts = elem.split('@') %}
+                                <a tabindex="0" target="_blank"
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
+                                {{ ";" if not loop.last }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.colecao %}
+                    <tr>
+                        <th>{{ _("Coleção") }}</th>
+                        <td>
+                            {% for elem in metadata.colecao %}
+                                {% set elem_parts = elem.split('@') %}
+                                <a tabindex="0" target="_blank"
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
+                                {{ ";" if not loop.last }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.numero_de_inventario %}
+                    <tr>
+                        <th>{{ _("Número de inventário") }}</th>
+                        <td>
+                            {% for elem in metadata.numero_de_inventario %}
+                                {{ elem }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.data %}
+                    <tr>
+                        <th>{{ _("Data") }}</th>
+                        <td>
+                            {% for elem in metadata.data %}{{ elem }}{{ ";" if not loop.last }}{% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.criador %}
+                    <tr>
+                        <th>{{ _("Criador(a)") }}</th>
+                        <td>
+                            {% for elem in metadata.criador %}
+                                {% set elem_parts = elem.split('@') %}
+                                <a tabindex="0" target="_blank"
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
+                                {{ ";" if not loop.last }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.material %}
+                    <tr>
+                        <th>{{ _("Material") }}</th>
+                        <td>
+                            {% for elem in metadata.material %}
+                                {% set elem_parts = elem.split('@') %}
+                                <a tabindex="0" target="_blank"
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
+                                {{ ";" if not loop.last }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.altura and metadata.largura %}
+                    <tr>
+                        <th>{{ _("Dimensões") }}</th>
+                        <td>
+                            {% set elem_parts_altura = metadata.altura.split('@') %}
+                            {% set elem_parts_altura = metadata.largura.split('@') %}
+                            {{ elem_parts_altura[0] }} {{ elem_parts_altura[1] }}
+                            &times; {{ elem_parts_largura[0] }} {{ elem_parts_largura[1] }}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.metodo %}
+                    <tr>
+                        <th>{{ _("Método de fabricação") }}</th>
+                        <td>
+                            {% for elem in metadata.metodo %}
+                                {% set elem_parts = elem.split('@') %}
+                                <a tabindex="0" target="_blank"
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
+                                {{ ";" if not loop.last }}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endif %}
+                {% if metadata.audio %}
+                    <tr>
+                        <th>{{ _("Versão audível") }}</th>
+                        <td>
+                            <audio controls>
+                                <source src="https://commons.wikimedia.org/wiki/Special:FilePath/{{ metadata.audio[0] }}"
+                                        type="audio/ogg">
+                                {{ _("Seu navegador não suporta este elemento de áudio") }}
+                            </audio>
+                        </td>
+                    </tr>
+                {% endif %}
+            </table>
+            {% if not depicts_metadata %}
+                <div class="w3-container">
+                    <h2>
+                        {{ _("Pesquise e insira, se existir, o motivo retratado no objeto.") }}
+                    </h2>
+                </div>
+            {% endif %}
+            <div class="w3-container">
+                <table class="table table-not-striped" style="width:100%; font-size: 125%">
+                    <tr>
+                        {% if depicts_metadata %}
+                            <th style="width:30%">
+                                {{ _("Motivos") }}
+                            </th>
+                        {% endif %}
+                        <td>
+                            {% if username %}
+                                <a class="button" title="{{ _('Adicionar motivo') }}">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-qid="{{ metadata.obra_qid[0] }}" data-target="#selectModal"
+                                            style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button>
+                                </a>
+                            {% endif %}
+                            {% if depicts_metadata %}
+                                {% for depicted_entity in depicts_metadata %}
+                                    {% if depicted_entity['retrata_stat_id'] != [''] %}
+                                        <div class="w3-container w3-twothirds" style="padding: 0">
+                                            <a class="button" tabindex="0"
+                                               title="{{ depicted_entity.retrata_label[0] }}">
+                                                <button type="button"
+                                                        class="btn btn-primary show-stat"
+                                                        data-stat-qid="{{ depicted_entity.retrata_qid[0] }}"
+                                                        data-stat-label="{{ depicted_entity.retrata_label[0] }}"
+                                                        data-stat-descr="{{ depicted_entity.retrata_descr[0] }}"
+                                                        data-stat-id="{{ depicted_entity.retrata_stat_id[0] }}"
+                                                        data-type="retrata"
+                                                        data-qid="{{ qid }}"
+                                                        data-toggle="modal"
+                                                        data-target="#showModal"
+                                                        style="font-size:125%; background-color: #0068a3; border-color: #0068a3; margin: 3px; width:100%">
+                                                    {{ depicted_entity.retrata_label[0] }}
+                                                </button>
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="w3-container" style="text-align: center">
+                <div id="back" class="w3-container" style="justify-content: center;">
+                    <a tabindex="0" href="{{ url_for('inicio') }}">
+                        <button type="button" class="button" id="back"
+                                style="background-color:#D04125;width:100%;margin:0">
+                            {{ _("VOLTAR À PÁGINA INICIAL") }}
+                        </button>
+                    </a>
+                </div>
+                {% if next_qid %}
+                    <div id="next" class="w3-container" style="justify-content: center;">
+                        <a tabindex="0" href="{{ url_for('item', qid=next_qid) }}">
+                            <button type="button" class="button" id="back"
+                                    style="background-color:#4D4D4D;width:100%;margin:0;color:white">
+                                {{ _("PULAR ESTE ITEM") }}
+                            </button>
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="w3-container">
+        <div class="modal " id="showModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">{{ _("Declaração") }}</h3>
+                        <button type="button" class="close" data-dismiss="modal" style="font-size:125%; ">&times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <a id='statement' tabindex='0' target='_blank' title=''
+                           style="font-size:125%; ">{{ _("Declaração") }}</a><br><span
+                            id="statement_descr">{{ _("Descrição da declaração") }}</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                style="font-size:125%; ">{{ _("Cancelar") }}</button>
+                        <a id='gotostatement' tabindex='0' target='_blank' href='' title='' style="color: white">
+                            <button id="gotostatement_button" type="button" class="btn btn-primary"
+                                    style="font-size:125%; background-color: #0068a3">
+                                {{ _("Ir para declaração") }}
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="selectModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">{{ _("Categoria") }}</h3>
+                        <button type="button" class="close" data-dismiss="modal" style="font-size:125%; ">&times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-size: 115%">
+                            {{ _("Escolha qual categoria de <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' title='Motivo (artes plásticas)'>motivo</a> deseja declarar:") }}
+                        </p>
+                        <div class="w3-row">
+                            <div class="w3-container w3-quarter"></div>
+                            <div class="w3-container w3-half">
+                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                        data-toggle="modal"
+                                        data-qid="{{ qid }}"
+                                        data-cat="Animais, plantas e flores" data-target="#addModal"
+                                        data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Animais, plantas e flores") }}</button>
+                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                        data-toggle="modal"
+                                        data-qid="{{ qid }}"
+                                        data-cat="Seres fantásticos" data-target="#addModal" data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Seres fantásticos") }}</button>
+                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                        data-toggle="modal"
+                                        data-qid="{{ qid }}"
+                                        data-cat="Outros" data-target="#addModal"
+                                        data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Outros") }}</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                style="font-size:125%; ">{{ _("Cancelar") }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="addModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title"></h3>
+                        <button type="button" class="close" data-dismiss="modal" style="font-size:125%; ">&times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="font-size: 115%">
+                            {{ _("Se o objeto possui um <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' title='Motivo (artes plásticas)'>motivo</a> identificável nas imagens disponíveis, pesquise-a pelo nome no banco de dados.") }}
+                            {{ _("Caso o motivo não esteja cadastrado, selecione a opção <i>\"Informar motivo faltante\"</i>.") }}
+                            {{ _("Nos casos em que o objeto não possua um motivo, selecione a opção") }}
+                            <i>"{{ _("Objeto não apresenta motivos") }}"</i>
+                        </p>
+                        <div class="form-inline">
+                            <input type="search" class="form-control" placeholder="{{ _('Pesquise') }}"
+                                   id="search_field"
+                                   style="font-size: 125%;width:90%">
+                            <button id="do_the_search" type="submit"
+                                    style="font-size: 100%;margin:0;width:10%;padding:10px"><i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                        <br>
+                        <span id="select_instruction" style="font-size: 125%">{{ _("Selecione uma opção:") }}</span><br>
+                        <form id="search_results">
+                            <input type="radio" id="motivo_desconhecido" name="claim_option" data-tipo="unknownvalue"
+                                   value="unknownvalueformotif">
+                            <label for="motivo_desconhecido"
+                                   style="font-size: 125%"><i>{{ _("Informar motivo faltante") }}</i></label><br>
+                            <input type="radio" id="motivo_inexistente" name="claim_option" data-tipo="novalue"
+                                   value="novalueformotif">
+                            <label for="motivo_inexistente"
+                                   style="font-size: 125%"><i>{{ _("Objeto não apresenta motivos") }}</i></label><br>
+                        </form>
+                    </div>
+                    <div class="modal-footer" id="secondModal">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                                style="font-size:125%; ">{{ _("Cancelar") }}</button>
+                        <button type="submit" id="addstatement" class="btn btn-primary"
+                                style="font-size:125%; background-color: #0068a3">{{ _("Adicionar declaração") }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#showModal').on('show.bs.modal', function (event) {
+            var stat_qid = $(event.relatedTarget).attr('data-stat-qid');
+            var stat_label = $(event.relatedTarget).attr('data-stat-label');
+            var stat_descr = $(event.relatedTarget).attr('data-stat-descr');
+            var stat_id = $(event.relatedTarget).attr('data-stat-id');
+
+            if (stat_qid !== '') {
+                $(this).find(".modal-body #statement").attr('href', 'https://www.wikidata.org/wiki/' + stat_qid);
+            }
+            $(this).find(".modal-body #statement").attr('title', stat_descr);
+            $(this).find(".modal-body #statement").text(stat_label);
+            $(this).find(".modal-body #statement_descr").text(stat_descr);
+
+            $(this).find(".modal-footer #gotostatement").attr('href', stat_id);
+        });
+
+        $('#addModal').on('show.bs.modal', function (event) {
+            var stat_qid = $(event.relatedTarget).attr('data-stat-id');
+            var qid_ = $(event.relatedTarget).attr('data-qid');
+            var cat = $(event.relatedTarget).attr('data-cat');
+            var title = "{{ _('Declaração') }} - " + cat;
+
+            $(this).find("#secondModal #addstatement").attr('data-stat-id', stat_qid);
+            $(this).find("#secondModal #addstatement").attr('data-qid', qid_);
+            $(this).find("#secondModal #addstatement").attr('data-cat', cat);
+            $(this).find("#search_field").attr('data-cat', cat);
+            $(this).find(".modal-title").empty();
+            $(this).find(".modal-title").append(title);
+        })
+
+        $('#addModal').on('hidden.bs.modal', function () {
+            var unknown_motif = "{{ _('Informar motivo faltante') }}";
+            var no_motif = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
+
+            $(this).find("#secondModal #addstatement").attr('data-stat-id', "");
+            $(this).find("#secondModal #addstatement").attr('data-qid', "");
+            $(this).find("#secondModal #addstatement").attr('data-cat', "");
+            $(this).find("#search_field").attr('data-cat', "");
+            $(this).find("#search_field").empty();
+            $(this).find("#search_field").val('');
+            $("#search_field").trigger('reset');
+            $("#search_results").empty();
+            $("#search_results").append(
+                '<input type="radio" id="motivo_desconhecido" name="claim_option" data-tipo="unknownvalue" value="unknownvalueformotif"> ' +
+                '<label for="motivo_desconhecido" style="font-size: 125%"><i>' + unknown_motif + '</i></label><br>' +
+                '<input type="radio" id="motivo_inexistente" name="claim_option" data-tipo="novalue" value="novalueformotif">' +
+                '<label for="motivo_inexistente" style="font-size: 125%"><i>' + no_motif + '</i></label><br>');
+        })
+
+        $('#addstatement').on('click', function () {
+            var sucesso = "{{ _('Declaração inserida com sucesso!') }}";
+            var erro = "{{ _('Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues')}}";
+            var claim = $("input[name='claim_option']:checked").val();
+            var tipo = $("input[name='claim_option']:checked").attr('data-tipo');
+            var qid = $(this).attr('data-qid');
+            var data = {
+                'id': qid,
+                'tipo': tipo,
+                'claim': claim,
+            }
+            $.ajax({
+                url: "/add_stat",
+                type: "POST",
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                dataType: "json",
+
+                success: function () {
+                    alert(sucesso);
+                    $('#addModal').modal('hide');
+                },
+                error: function () {
+                    alert(erro);
+                }
+            });
+        });
+
+        $("#search_field").keypress(function (event) {
+            if (event.keyCode === 13) {
+                $("#do_the_search").click();
+            }
+        });
+
+        $("#do_the_search").on('click', function (event) {
+            var unknown_motif = "{{ _('Informar motivo faltante') }}";
+            var no_motif = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
+            var wait = "{{ _('Pesquisando o banco de dados...') }}";
+            if ($("#search_field")[0].value) {
+                $("#search_results").empty();
+                $("#search_results").append(wait);
+                search();
+            } else {
+                $("#search_results").empty();
+                $("#search_results").append(
+                    '<input type="radio" id="motivo_desconhecido" name="claim_option" data-tipo="unknownvalue" value="unknownvalueformotif"> ' +
+                    '<label for="motivo_desconhecido" style="font-size: 125%"><i>' + unknown_motif + '</i></label><br>' +
+                    '<input type="radio" id="motivo_inexistente" name="claim_option" data-tipo="novalue" value="novalueformotif">' +
+                    '<label for="motivo_inexistente" style="font-size: 125%"><i>' + no_motif + '</i></label><br>');
+            }
+        });
+
+        function search() {
+            var input = $('#search_field')[0].value;
+            var cat = $('#search_field')[0].dataset['cat'];
+            var data = {'term': input, 'cat': cat};
+            var add_brand = "{{ _('Adicionar a marca')}}";
+            var as_descr = "{{_('como uma inscrição') }}";
+
+            console.log(input);
+            $.ajax({
+                url: "/search",
+                type: "POST",
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                dataType: "json",
+
+                success: function (response) {
+                    var unknown_motif = "{{ _('Informar motivo faltante') }}";
+                    var no_motif = "{{ _('Objeto não apresenta motivos') }}";
+                    var no_result = "{{ _('Nenhum resultado obtido') }}";
+                    $("#search_results").empty()
+
+                    $("#search_results").append('<input type="radio" id="motivo_desconhecido" name="claim_option" data-tipo="unknownvalue" value="unknownvalueformotif"> ' +
+                        '<label for="motivo_desconhecido" style="font-size: 125%"><i>' + unknown_motif + '</i></label><br>');
+
+                    $("#search_results").append('<input type="radio" id="motivo_inexistente" name="claim_option" data-tipo="novalue" value="novalueformotif">' +
+                        '<label for="motivo_inexistente" style="font-size: 125%"><i>' + no_motif + '</i></label><br>');
+
+                    if (response.length > 0) {
+                        for (var i = 0; i < (Math.min(15, response.length)); i++) {
+                            $("#search_results").append('<input type="radio" id="' + response[i]["qid"] + '" name="claim_option" data-tipo="P180" value="' + response[i]["qid"] + '"> ' +
+                                '<label for="' + response[i]["qid"] + '" style="font-size: 125%"><b style="color: #004266;font-size: 125%">' + response[i]["label"] + ' (' + response[i]["qid"] + ')</b></label>: ' + response[i]["descr"] + '<br>');
+                        }
+                    } else {
+                        $("#search_results").append(no_result);
+                    }
+                },
+                error: function () {
+                    alert('{{_("Selecione um elemento")}}');
+                }
+            });
+        };
+
+        $(document).ready(function () {
+            $('.image_item')
+                .wrap('<span style="display:inline-block"></span>')
+                .css('display', 'block')
+                .parent()
+                .zoom();
+        });
+    </script>
+{% endblock %}

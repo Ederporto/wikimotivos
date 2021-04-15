@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% with lang=lang, username=username %}
+        {% include 'topnavbar.html' %}
+    {% endwith %}
+{% endblock %}
+
+{% block title %}{{ descriptor }}{% endblock %}
+{% block scripts %}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'pagination.css') }}" type='text/css'>
+{% endblock %}
+
+{% block content %}
+    <div class="w3-container" style="text-align: center; padding: 30px; font-size: 135%">
+        {% set descrip %}{{ descriptor }}{% endset %}
+        {% set gender %}{{ gender_marker }}{% endset %}
+        {{ _("Esta seleção de objetos apresenta <i>%(p180)s</i> do acervo do Museu do Ipiranga.", p180=descrip) }}
+        <br>
+        {% set quantidade %}{{ collection|length }}{% endset %}
+        {% set pginicial %}<a tabindex="0" aria-label='{{_("Página inicial")}}' href='{{ url_for("inicio") }}'>{{_("Página inicial")}}</a>{% endset %}
+        {{ _("São %(quant)s objetos selecionados. Para navegar por outras seleções de objetos, volte à %(home)s.", quant=quantidade, home=pginicial) }}
+    </div>
+    {% if collection %}
+        <div id="pagination-container" style="padding: 30px"></div>
+        <div id="image_list" class="container" style="width:100%;">
+            <div class="container" id="image_container" style="column-count: 4; column-width:250px"></div>
+        </div>
+    {% endif %}
+    <script>
+    $('#pagination-container').pagination({
+        dataSource: {{ collection|tojson }},
+        pageSize: 20,
+        callback: function(data, pagination) {
+            var html = simpleTemplating(data);
+            $("#image_container").html(html);
+        }
+    });
+
+    function simpleTemplating(data) {
+        var html = "";
+        $.each(data, function(index, item){
+            html += '<a tabindex="0" href="/item/'+item.qid+'">' +
+                '<div class="grid_image" style="width:100%">' +
+                '<img src="https://commons.wikimedia.org/wiki/Special:FilePath/'+
+                item.imagem+
+                '?width=500px" width="100%" height=auto alt="'+
+                item.label+
+                '" style="object-fit:contain;max-widht:1000px; align:center;"/>' +
+                '<div class="overlay"><div class="text-area">'+item.label+'</div></div></div></a>';
+        });
+        return html;
+    }
+</script>
+{% endblock %}

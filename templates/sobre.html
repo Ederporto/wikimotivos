@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% with lang=lang, username=username %}
+        {% include 'topnavbar.html' %}
+    {% endwith %}
+{% endblock %}
+
+{% block title %}{{ _("Sobre") }}{% endblock %}
+
+{% block content %}
+<div class="w3-row" id="sobre" style="text-align: center">
+    <div class="w3-container w3-quarter"></div>
+    <div class="w3-container w3-half" style="font-size: 125%; text-align: left">
+        <p>
+            {{_("Você está pronto para ser um(a) investigador(a) de acervos? É o que o aplicativo <b>Wiki Museu do Ipiranga - O que retrata?</b> te oferece: desenvolver suas aptidões de investigação e conhecer mais a fundo o acervo do Museu do Ipiranga.")}}<br><br>
+            {{_("A curadoria de acervo é uma das atividades mais importantes do museu. Nela, pesquisadoras e pesquisadores -- e agora você! -- se debruçam sobre os objetos da coleção para identificar sua procedência, o que retrata, a história da peça. No aplicativo <b>Wiki Museu do Ipiranga - O que retrata?</b>, você participa desse trabalho de curadoria, identificando os motivos representados em objetos do acervo do Museu do Ipiranga.")}}<br><br>
+            {{_("O trabalho é sério! Suas edições são interativas e automaticamente registradas. Elas aparecem num grande documento, uma base de dados, em que pouco a pouco as informações sobre o acervo do Museu do Ipiranga são melhoradas. Você é agora tem o poder de ajudar -- que responsabilidade, né?")}}<br><br>
+            {{_("O aplicativo é um recurso de curadoria colaborativa, em que todas e todos podem participar. Funciona como a Wikipédia, a enciclopédia em que todo mundo pode editar.")}}<br><br>
+            {{_("Mãos à obra, temos agora %(number_works)s objetos cujas informações precisam de sua ajuda!", number_works=number_works)}}<br><br>
+        </p>
+        <hr>
+        <p>
+            {% set flask %}<a target='_blank' href='https://pt.wikipedia.org/wiki/Flask_(framework_web)'><i>{{_("Flask")}}</i></a>{% endset %}
+            {% set github %}<a target='_blank' href='https://github.com/WikiMovimentoBrasil/wikimotivos'>{{_("GitHub")}}</a>{% endset %}
+            {% set license_code %}<a target='_blank' href='https://github.com/WikiMovimentoBrasil/wikimotivos/blob/master/LICENSE'>{{_("GPL v3.0")}}</a>{% endset %}
+            {% set license_text %}<a target='_blank' href='https://creativecommons.org/licenses/by-sa/4.0/'>{{_("CC-BY-SA 4.0 Internacional")}}</a>{% endset %}
+            {% set license_wikidata %}<a target='_blank' href='https://creativecommons.org/share-your-work/public-domain/cc0/'>{{_("CC0")}}</a>{% endset %}
+            <small>
+                {{_("Este aplicativo foi desenvolvido em %(flask)s.", flask=flask)}}<br>
+                {{_("O código-fonte está disponível no %(github)s.", github=github)}}<br>
+                {{_("Licença do cógido-fonte: %(license_code)s.", license_code=license_code)}}<br>
+                {{_("Licença de textos: %(license_text)s.", license_text=license_text)}}<br>
+                {{_("Licença dos metadados retornados do Wikidata: %(license_wikidata)s.", license_wikidata=license_wikidata)}}<br>
+                {{_("Versão 1.0.")}}
+            </small>
+        </p>
+    </div>
+</div>
+{% endblock %}

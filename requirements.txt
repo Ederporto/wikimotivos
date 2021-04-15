@@ -1,0 +1,6 @@
+flask
+pyyaml
+flask_babel
+requests
+roman
+requests_oauthlib
