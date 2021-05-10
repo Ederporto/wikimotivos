@@ -1,0 +1,553 @@
+# English translations for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2021-05-09 22:31-0300\n"
+"PO-Revision-Date: 2021-05-09 22:31-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: templates/apps.html:9 templates/topnavbar.html:5
+msgid "Outros aplicativos"
+msgstr "Other apps"
+
+#: templates/apps.html:19
+msgid ""
+"A iniciativa do <b>Projeto Novo Museu do Ipiranga</b> tem desenvolvido "
+"uma série de aplicativos, chamada <b>Wiki Museu do Ipiranga</b>, com o "
+"objetivo de convidar você a atuar no trabalho de investigação e curadoria"
+" das obras e objetos do acervo do Museu do Ipiranga."
+msgstr ""
+"The initiative of the <b>Novo Museu do Ipiranga Project</b> has developed "
+"a series of applications, called <b>Wiki Museu do Ipiranga</b>, with the"
+"aim to invite you to work in the investigation and curation work"
+"of the items and objects from the Ipiranga Museum collection."
+
+#: templates/apps.html:30 templates/apps.html:34
+msgid "Logotipo Wiki Museu do Ipiranga - Quantos tem?"
+msgstr "Logo of Wiki Museu do Ipiranga - How many?"
+
+#: templates/apps.html:41
+msgid ""
+"O primeiro aplicativo, <b>Quantos tem?</b> te convida a contar quantos "
+"elementos estão presentes nas obras do acervo do Museu do Ipiranga."
+msgstr ""
+"The first app, <b>How many?</b> invites you to count how many "
+"elements are present in the works of the Ipiranga Museum collection."
+
+#: templates/apps.html:51 templates/apps.html:55
+msgid "Logotipo Wiki Museu do Ipiranga - Com que roupa eu vou?"
+msgstr "Logo of Wiki Museu do Ipiranga - What clothes should I wear?"
+
+#: templates/apps.html:62
+msgid ""
+"O segundo aplicativo, <b>Com que roupa eu vou?</b> te convida a descrever"
+" as roupas e os acessórios das pessoas retratadas em obras do acervo do "
+"Museu do Ipiranga."
+msgstr ""
+"The second app, <b>What clothes should I wear?</b> invites you to describe "
+"the clothes and accessories of the people portrayed in works from the collection of"
+"Ipiranga Museum."
+
+#: templates/apps.html:72 templates/apps.html:76
+msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
+msgstr "Logo of Wiki Museu do Ipiranga - Which brand?"
+
+#: templates/apps.html:83
+msgid ""
+"O terceiro aplicativo, <b>Qual a marca?</b> te convida a identificar as "
+"marcas de objetos do acervo do Museu do Ipiranga."
+msgstr "Identify brands on objects of the Ipiranga Museum collection"
+"The third application, <b>Which brand?</b> invites you to identify "
+"the brand of objects from the Ipiranga Museum collection."
+
+#: templates/apps.html:93 templates/apps.html:97 templates/base.html:39
+#: templates/base.html:41
+msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
+msgstr "Logo of Wiki Museu do Ipiranga - What is depicted?"
+
+#: templates/apps.html:104
+msgid ""
+"O quarto aplicativo, <b>O que retrata?</b> te convida a identificar os "
+"motivos representados em objetos do acervo do Museu do Ipiranga."
+msgstr ""
+"The fourth application, <b>What is depited?</b> invites you to identify the "
+"motifs represented in objects from the Ipiranga Museum collection."
+
+#: templates/base.html:20 templates/colecao.html:21 templates/inicio.html:9
+#: templates/topnavbar.html:2
+msgid "Página inicial"
+msgstr "Homepage"
+
+#: templates/base.html:20
+msgid "Wiki Museu do Ipiranga - O que retrata?"
+msgstr "Wiki Museu do Ipiranga - Which brand?"
+
+#: templates/base.html:50
+msgid "Projeto Novo Museu do Ipiranga"
+msgstr "Novo Museu do Ipiranga Project"
+
+#: templates/base.html:51
+#, python-format
+msgid ""
+"<i>Wiki Museu do Ipiranga - O que retrata?</i> é um aplicativo "
+"desenvolvido no contexto do <i><b>%(projeto)s</b></i>, organizado pelo "
+"<b>Grupo de Usuários Wiki Movimento Brasil</b> e o <b>Museu do "
+"Ipiranga</b>, em parceria com a <b>Fundação Banco do Brasil</b> e com "
+"realização da <b>Universidade de São Paulo</b> e da <b>Fundação de Apoio "
+"à Universidade de São Paulo</b>."
+msgstr ""
+"<i>Wiki Museu do Ipiranga - What is depicted?</i> is an application developed "
+"in the context of <i><b>%(projeto)s</b></i>, organized by the <b>User "
+"Group Wiki Movimento Brasil</b> and the <b> Museu do Ipiranga</b>, in "
+"partnership with the <b>Banco do Brasil Foundation</b> and organized by "
+"the <b>University of São Paulo</b> and the <b>University of São Paulo "
+"Support Foundation</b>."
+
+#: templates/colecao.html:18
+#, python-format
+msgid ""
+"Esta seleção de objetos apresenta <i>%(p180)s</i> do acervo do Museu do "
+"Ipiranga."
+msgstr "This selection of objects of Museu do Ipiranga presents <i>%(p180)s</i>"
+
+#: templates/colecao.html:22
+#, python-format
+msgid ""
+"São %(quant)s objetos selecionados. Para navegar por outras seleções de "
+"objetos, volte à %(home)s."
+msgstr ""
+"There are %(quant)s objects selected. To browse other selections of "
+"objects, return to the %(home)s."
+
+#: templates/error.html:3 templates/error.html:8
+msgid "Algo deu errado!"
+msgstr "Something went wrong!"
+
+#: templates/error.html:15
+msgid "REPORTAR ERRO"
+msgstr "REPORT ERROR"
+
+#: templates/error.html:22 templates/item.html:244
+msgid "VOLTAR À PÁGINA INICIAL"
+msgstr "GO TO HOMEPAGE"
+
+#: templates/inicio.html:16 templates/inicio.html:18
+msgid "Logotipo Wiki Museu do Ipiranga"
+msgstr "Logo of Wiki Museu do Ipiranga"
+
+#: templates/inicio.html:26
+msgid "Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - O que retrata?</i>"
+msgstr "Welcome to the <i>Wiki Museu do Ipiranga - What is depicted?</i>"
+
+#: templates/inicio.html:29
+msgid ""
+"Neste aplicativo, você participa do trabalho de pesquisa do Museu do "
+"Ipiranga. Sua tarefa: "
+msgstr ""
+"In this application, you participate in the research work of the Ipiranga"
+" Museum. Your task: "
+
+#: templates/inicio.html:29
+msgid ""
+"Identificar os <a target=\"_blank\" title=\"motivo (artes plásticas)\" "
+"href=\"https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)\">motivos</a>"
+" retratados nos objetos do acervo do Museu do Ipiranga"
+msgstr ""
+"Identify the <a target=\"_blank\" title=\"motif (visual arts)\" "
+"href=\"https://en.wikipedia.org/wiki/Motif_(visual_arts)\">motifs</a> depicted "
+"in objects of the Ipiranga Museum collection."
+
+#: templates/inicio.html:29
+msgid ""
+"Para participar, é preciso autenticar-se; depois, escolha uma categoria "
+"abaixo para começar."
+msgstr ""
+"To participate, you need to authenticate yourself; then choose a category"
+" below to start."
+
+#: templates/inicio.html:42
+msgid "Roupas"
+msgstr "Clothes"
+
+#: templates/inicio.html:49
+msgid "Bonecas"
+msgstr "Dolls"
+
+#: templates/inicio.html:58
+msgid "Brinquedos"
+msgstr "Toys"
+
+#: templates/inicio.html:65
+msgid "Cozinha"
+msgstr "Kitchen"
+
+#: templates/inicio.html:74
+msgid "Mobiliário"
+msgstr "Furniture"
+
+#: templates/inicio.html:81
+msgid "Ornamentos"
+msgstr "Ornaments"
+
+#: templates/inicio.html:90
+msgid "Vasos"
+msgstr "Vases"
+
+#: templates/inicio.html:97
+msgid "Têxtil"
+msgstr "Textile"
+
+#: templates/inicio.html:106
+msgid "Iluminação"
+msgstr "Lighting"
+
+#: templates/inicio.html:113
+msgid "Escritório"
+msgstr "Office"
+
+#: templates/inicio.html:122
+msgid "Esculturas"
+msgstr "Sculptures"
+
+#: templates/inicio.html:129
+msgid "Ferramentas"
+msgstr "Tools"
+
+#: templates/inicio.html:138
+msgid "Miscelânea"
+msgstr "Miscellany"
+
+#: templates/item.html:53
+msgid "Veja as imagens desse objeto no Wikimedia Commons"
+msgstr "See the images of this object at Wikimedia Commons"
+
+#: templates/item.html:62
+msgid "Veja essa imagem no Wikimedia Commons"
+msgstr "See this image in Wikimedia Commons"
+
+#: templates/item.html:70
+msgid ""
+"Faça a sua autenticação clicando no botão 'Autenticar-se' no canto "
+"superior direito"
+msgstr ""
+"Authenticate yourself by clicking on the 'Authenticate' button in the "
+"upper right corner"
+
+#: templates/item.html:76
+msgid "Objeto"
+msgstr "Object"
+
+#: templates/item.html:83
+msgid "Instância de"
+msgstr "Instance of"
+
+#: templates/item.html:96
+msgid "Coleção"
+msgstr "Collection"
+
+#: templates/item.html:109
+msgid "Número de inventário"
+msgstr "Inventory number"
+
+#: templates/item.html:119
+msgid "Data"
+msgstr "Date"
+
+#: templates/item.html:127
+msgid "Criador(a)"
+msgstr "Creator"
+
+#: templates/item.html:140
+msgid "Material"
+msgstr "Material"
+
+#: templates/item.html:153
+msgid "Dimensões"
+msgstr "Dimensions"
+
+#: templates/item.html:164
+msgid "Método de fabricação"
+msgstr "Fabrication method"
+
+#: templates/item.html:177
+msgid "Versão audível"
+msgstr "Audible version"
+
+#: templates/item.html:182
+msgid "Seu navegador não suporta este elemento de áudio"
+msgstr "Your browser does not support this audio element"
+
+#: templates/item.html:191
+msgid "Pesquise e insira, se existir, o motivo retratado no objeto."
+msgstr "Search for and enter the object's motif."
+
+#: templates/item.html:200
+msgid "Motivos"
+msgstr "Motifs"
+
+#: templates/item.html:205
+msgid "Adicionar motivo"
+msgstr "Add motif"
+
+#: templates/item.html:208
+msgid "Adicionar"
+msgstr "Add"
+
+#: templates/item.html:253
+msgid "PULAR ESTE ITEM"
+msgstr "SKIP THIS ITEM"
+
+#: templates/item.html:268 templates/item.html:274 templates/item.html:400
+msgid "Declaração"
+msgstr "Statement"
+
+#: templates/item.html:275
+msgid "Descrição da declaração"
+msgstr "Statement description"
+
+#: templates/item.html:279 templates/item.html:328 templates/item.html:371
+msgid "Cancelar"
+msgstr "Cancel"
+
+#: templates/item.html:283
+msgid "Ir para declaração"
+msgstr "Go to statement"
+
+#: templates/item.html:294
+msgid "Categoria"
+msgstr "Category"
+
+#: templates/item.html:300
+msgid ""
+"Escolha qual categoria de <a target=\"_blank\" "
+"href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
+"title='Motivo (artes plásticas)'>motivo</a> deseja declarar:"
+msgstr ""
+"Choose which category of <a target=\"_blank\" "
+"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' "
+"title='Motif (visual arts)'>motif</a> you want to declare:"
+
+#: templates/item.html:310
+msgid "Animais, plantas e flores"
+msgstr "Animals, plants and flowers"
+
+#: templates/item.html:315
+msgid "Seres fantásticos"
+msgstr "Fantastic beings"
+
+#: templates/item.html:321
+msgid "Outros"
+msgstr "Others"
+
+#: templates/item.html:343
+msgid ""
+"Se o objeto possui um <a target=\"_blank\" "
+"href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
+"title='Motivo (artes plásticas)'>motivo</a> identificável nas imagens "
+"disponíveis, pesquise-a pelo nome no banco de dados."
+msgstr ""
+"If the object has a identifiable <a target=\"_blank\" "
+"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' "
+"title='Motif (visual arts)'>motif</a>  in the images "
+"available, search it by the name in the database."
+
+#: templates/item.html:344
+msgid ""
+"Caso o motivo não esteja cadastrado, selecione a opção <i>\"Informar "
+"motivo faltante\"</i>."
+msgstr ""
+"If the motif is not registered, select the option <i>\"Inform "
+"missing motif\"</i>. "
+
+#: templates/item.html:345
+msgid "Nos casos em que o objeto não possua um motivo, selecione a opção"
+msgstr "In cases where the object does not have a motif, select the option"
+
+#: templates/item.html:346 templates/item.html:366 templates/item.html:498
+msgid "Objeto não apresenta motivos"
+msgstr "Object has no motif"
+
+#: templates/item.html:349
+msgid "Pesquise"
+msgstr "Search"
+
+#: templates/item.html:357
+msgid "Selecione uma opção:"
+msgstr "Select an option:"
+
+#: templates/item.html:362 templates/item.html:411 templates/item.html:464
+#: templates/item.html:497
+msgid "Informar motivo faltante"
+msgstr "Report missing motif"
+
+#: templates/item.html:373
+msgid "Adicionar declaração"
+msgstr "Add statement"
+
+#: templates/item.html:430
+msgid "Declaração inserida com sucesso!"
+msgstr "Statement successfully registered!"
+
+#: templates/item.html:431
+msgid ""
+"Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
+"persista, por favor, reporte em "
+"https://github.com/WikiMovimentoBrasil/wikimotivos/issues"
+msgstr ""
+"Something went wrong! Verify that you selected a option. In the error "
+"persists, please, report in  "
+"https://github.com/WikiMovimentoBrasil/wikimotivos/issues"
+
+#: templates/item.html:466
+msgid "Pesquisando o banco de dados..."
+msgstr "Searching the database..."
+
+#: templates/item.html:499
+msgid "Nenhum resultado obtido"
+msgstr "No result found"
+
+#: templates/item.html:518
+msgid "Selecione um elemento"
+msgstr "Select an item"
+
+#: templates/sobre.html:9 templates/topnavbar.html:3
+msgid "Sobre"
+msgstr "About"
+
+#: templates/sobre.html:16
+msgid ""
+"Você está pronto para ser um(a) investigador(a) de acervos? É o que o "
+"aplicativo <b>Wiki Museu do Ipiranga - O que retrata?</b> te oferece: "
+"desenvolver suas aptidões de investigação e conhecer mais a fundo o "
+"acervo do Museu do Ipiranga."
+msgstr ""
+"Are you ready to be a collection researcher? This is what the <b>Wiki "
+"Museu do Ipiranga - What is depicted?</b> app offers you: "
+"develop your research skills and learn more about the Ipiranga Museum "
+"collection."
+
+#: templates/sobre.html:17
+msgid ""
+"A curadoria de acervo é uma das atividades mais importantes do museu. "
+"Nela, pesquisadoras e pesquisadores -- e agora você! -- se debruçam sobre"
+" os objetos da coleção para identificar sua procedência, o que retrata, a"
+" história da peça. No aplicativo <b>Wiki Museu do Ipiranga - O que "
+"retrata?</b>, você participa desse trabalho de curadoria, identificando "
+"os motivos representados em objetos do acervo do Museu do Ipiranga."
+msgstr ""
+"Curating the collection is one of the most important activities of the "
+"museum. Here, researchers -- and now you! -- look at the objects in the "
+"collection to identify their origin, what they portray, the history of "
+"the piece. In the application <b>Wiki Museu do Ipiranga - What is depicted?</b>, "
+"you participate in this curatorial work, describing the clothes and accessories "
+"of the people portrayed in objects at the Museu do Ipiranga."
+
+#: templates/sobre.html:18
+msgid ""
+"O trabalho é sério! Suas edições são interativas e automaticamente "
+"registradas. Elas aparecem num grande documento, uma base de dados, em "
+"que pouco a pouco as informações sobre o acervo do Museu do Ipiranga são "
+"melhoradas. Você é agora tem o poder de ajudar -- que responsabilidade, "
+"né?"
+msgstr ""
+"The work is serious! Your edits are interactive and automatically "
+"recorded. They appear in a large document, a database, in which the "
+"information about the Ipiranga Museum collection is gradually improved. "
+"You are now empowered to help - what a responsibility, right?"
+
+#: templates/sobre.html:19
+msgid ""
+"O aplicativo é um recurso de curadoria colaborativa, em que todas e todos"
+" podem participar. Funciona como a Wikipédia, a enciclopédia em que todo "
+"mundo pode editar."
+msgstr ""
+"The application is a collaborative curation resource, where everyone can "
+"participate. It works like Wikipedia, the encyclopedia in which everyone "
+"world can edit."
+
+#: templates/sobre.html:20
+#, python-format
+msgid ""
+"Mãos à obra, temos agora %(number_works)s objetos cujas informações "
+"precisam de sua ajuda!"
+msgstr ""
+"Hands on, we now have %(number_works)s objects whose information need "
+"your help!"
+
+#: templates/sobre.html:24
+msgid "Flask"
+msgstr "Flask"
+
+#: templates/sobre.html:25
+msgid "GitHub"
+msgstr "GitHub"
+
+#: templates/sobre.html:26
+msgid "GPL v3.0"
+msgstr "GPL v3.0"
+
+#: templates/sobre.html:27
+msgid "CC-BY-SA 4.0 Internacional"
+msgstr "CC-BY-SA 4.0 International"
+
+#: templates/sobre.html:28
+msgid "CC0"
+msgstr "CC0"
+
+#: templates/sobre.html:30
+#, python-format
+msgid "Este aplicativo foi desenvolvido em %(flask)s."
+msgstr "This app was developed in %(flask)s."
+
+#: templates/sobre.html:31
+#, python-format
+msgid "O código-fonte está disponível no %(github)s."
+msgstr "The source code is available at %(github)s."
+
+#: templates/sobre.html:32
+#, python-format
+msgid "Licença do cógido-fonte: %(license_code)s."
+msgstr "Source code license: %(license_code)s."
+
+#: templates/sobre.html:33
+#, python-format
+msgid "Licença de textos: %(license_text)s."
+msgstr "Text license: %(license_text)s."
+
+#: templates/sobre.html:34
+#, python-format
+msgid "Licença dos metadados retornados do Wikidata: %(license_wikidata)s."
+msgstr "License of objects returned from Wikidata: %(license_wikidata)s."
+
+#: templates/sobre.html:35
+msgid "Versão 1.0."
+msgstr "Version 1.0"
+
+#: templates/topnavbar.html:4
+msgid "Ajuda"
+msgstr "Help"
+
+#: templates/topnavbar.html:15
+msgid "Autenticar-se"
+msgstr "Login"
+
+#: templates/topnavbar.html:17
+msgid "Menu"
+msgstr "Menu"
+
+#: templates/tutorial.html:9
+msgid "Tutorial"
+msgstr "Tutorial"
+

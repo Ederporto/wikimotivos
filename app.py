@@ -178,6 +178,15 @@ def tutorial():
                            lang=lang)
 
 
+@app.route('/apps')
+def apps():
+    username = get_username()
+    lang = pt_to_ptbr(get_locale())
+    return render_template('apps.html',
+                           username=username,
+                           lang=lang)
+
+
 @app.route('/colecao/<type>')
 def colecao(type):
     username = get_username()

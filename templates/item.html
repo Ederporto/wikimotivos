@@ -409,7 +409,7 @@
 
         $('#addModal').on('hidden.bs.modal', function () {
             var unknown_motif = "{{ _('Informar motivo faltante') }}";
-            var no_motif = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
+            var no_motif = "{{ _('Objeto não apresenta motivos') }}";
 
             $(this).find("#secondModal #addstatement").attr('data-stat-id', "");
             $(this).find("#secondModal #addstatement").attr('data-qid', "");
@@ -482,8 +482,6 @@
             var input = $('#search_field')[0].value;
             var cat = $('#search_field')[0].dataset['cat'];
             var data = {'term': input, 'cat': cat};
-            var add_brand = "{{ _('Adicionar a marca')}}";
-            var as_descr = "{{_('como uma inscrição') }}";
 
             console.log(input);
             $.ajax({
