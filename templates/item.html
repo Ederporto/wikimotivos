@@ -462,7 +462,7 @@
 
         $("#do_the_search").on('click', function (event) {
             var unknown_motif = "{{ _('Informar motivo faltante') }}";
-            var no_motif = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
+            var no_motif = "{{ _('Objeto não apresenta motivos') }}";
             var wait = "{{ _('Pesquisando o banco de dados...') }}";
             if ($("#search_field")[0].value) {
                 $("#search_results").empty();

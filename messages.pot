@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-09 22:31-0300\n"
+"POT-Creation-Date: 2021-05-09 23:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -335,7 +335,8 @@ msgstr ""
 msgid "Nos casos em que o objeto não possua um motivo, selecione a opção"
 msgstr ""
 
-#: templates/item.html:346 templates/item.html:366 templates/item.html:498
+#: templates/item.html:346 templates/item.html:366 templates/item.html:412
+#: templates/item.html:465 templates/item.html:496
 msgid "Objeto não apresenta motivos"
 msgstr ""
 
@@ -348,16 +349,12 @@ msgid "Selecione uma opção:"
 msgstr ""
 
 #: templates/item.html:362 templates/item.html:411 templates/item.html:464
-#: templates/item.html:497
+#: templates/item.html:495
 msgid "Informar motivo faltante"
 msgstr ""
 
 #: templates/item.html:373
 msgid "Adicionar declaração"
-msgstr ""
-
-#: templates/item.html:412 templates/item.html:465
-msgid "Objeto não tem marca conhecida ou não está visível"
 msgstr ""
 
 #: templates/item.html:430
@@ -375,19 +372,11 @@ msgstr ""
 msgid "Pesquisando o banco de dados..."
 msgstr ""
 
-#: templates/item.html:485
-msgid "Adicionar a marca"
-msgstr ""
-
-#: templates/item.html:486
-msgid "como uma inscrição"
-msgstr ""
-
-#: templates/item.html:499
+#: templates/item.html:497
 msgid "Nenhum resultado obtido"
 msgstr ""
 
-#: templates/item.html:518
+#: templates/item.html:516
 msgid "Selecione um elemento"
 msgstr ""
 

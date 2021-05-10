@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-09 22:31-0300\n"
+"POT-Creation-Date: 2021-05-09 23:10-0300\n"
 "PO-Revision-Date: 2021-05-09 22:31-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -29,10 +29,10 @@ msgid ""
 "objetivo de convidar você a atuar no trabalho de investigação e curadoria"
 " das obras e objetos do acervo do Museu do Ipiranga."
 msgstr ""
-"The initiative of the <b>Novo Museu do Ipiranga Project</b> has developed "
-"a series of applications, called <b>Wiki Museu do Ipiranga</b>, with the"
-"aim to invite you to work in the investigation and curation work"
-"of the items and objects from the Ipiranga Museum collection."
+"The initiative of the <b>Novo Museu do Ipiranga Project</b> has developed"
+" a series of applications, called <b>Wiki Museu do Ipiranga</b>, with "
+"theaim to invite you to work in the investigation and curation workof the"
+" items and objects from the Ipiranga Museum collection."
 
 #: templates/apps.html:30 templates/apps.html:34
 msgid "Logotipo Wiki Museu do Ipiranga - Quantos tem?"
@@ -43,8 +43,8 @@ msgid ""
 "O primeiro aplicativo, <b>Quantos tem?</b> te convida a contar quantos "
 "elementos estão presentes nas obras do acervo do Museu do Ipiranga."
 msgstr ""
-"The first app, <b>How many?</b> invites you to count how many "
-"elements are present in the works of the Ipiranga Museum collection."
+"The first app, <b>How many?</b> invites you to count how many elements "
+"are present in the works of the Ipiranga Museum collection."
 
 #: templates/apps.html:51 templates/apps.html:55
 msgid "Logotipo Wiki Museu do Ipiranga - Com que roupa eu vou?"
@@ -56,9 +56,9 @@ msgid ""
 " as roupas e os acessórios das pessoas retratadas em obras do acervo do "
 "Museu do Ipiranga."
 msgstr ""
-"The second app, <b>What clothes should I wear?</b> invites you to describe "
-"the clothes and accessories of the people portrayed in works from the collection of"
-"Ipiranga Museum."
+"The second app, <b>What clothes should I wear?</b> invites you to "
+"describe the clothes and accessories of the people portrayed in works "
+"from the collection ofIpiranga Museum."
 
 #: templates/apps.html:72 templates/apps.html:76
 msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
@@ -68,9 +68,10 @@ msgstr "Logo of Wiki Museu do Ipiranga - Which brand?"
 msgid ""
 "O terceiro aplicativo, <b>Qual a marca?</b> te convida a identificar as "
 "marcas de objetos do acervo do Museu do Ipiranga."
-msgstr "Identify brands on objects of the Ipiranga Museum collection"
-"The third application, <b>Which brand?</b> invites you to identify "
-"the brand of objects from the Ipiranga Museum collection."
+msgstr ""
+"Identify brands on objects of the Ipiranga Museum collectionThe third "
+"application, <b>Which brand?</b> invites you to identify the brand of "
+"objects from the Ipiranga Museum collection."
 
 #: templates/apps.html:93 templates/apps.html:97 templates/base.html:39
 #: templates/base.html:41
@@ -82,8 +83,8 @@ msgid ""
 "O quarto aplicativo, <b>O que retrata?</b> te convida a identificar os "
 "motivos representados em objetos do acervo do Museu do Ipiranga."
 msgstr ""
-"The fourth application, <b>What is depited?</b> invites you to identify the "
-"motifs represented in objects from the Ipiranga Museum collection."
+"The fourth application, <b>What is depited?</b> invites you to identify "
+"the motifs represented in objects from the Ipiranga Museum collection."
 
 #: templates/base.html:20 templates/colecao.html:21 templates/inicio.html:9
 #: templates/topnavbar.html:2
@@ -108,12 +109,12 @@ msgid ""
 "realização da <b>Universidade de São Paulo</b> e da <b>Fundação de Apoio "
 "à Universidade de São Paulo</b>."
 msgstr ""
-"<i>Wiki Museu do Ipiranga - What is depicted?</i> is an application developed "
-"in the context of <i><b>%(projeto)s</b></i>, organized by the <b>User "
-"Group Wiki Movimento Brasil</b> and the <b> Museu do Ipiranga</b>, in "
-"partnership with the <b>Banco do Brasil Foundation</b> and organized by "
-"the <b>University of São Paulo</b> and the <b>University of São Paulo "
-"Support Foundation</b>."
+"<i>Wiki Museu do Ipiranga - What is depicted?</i> is an application "
+"developed in the context of <i><b>%(projeto)s</b></i>, organized by the "
+"<b>User Group Wiki Movimento Brasil</b> and the <b> Museu do "
+"Ipiranga</b>, in partnership with the <b>Banco do Brasil Foundation</b> "
+"and organized by the <b>University of São Paulo</b> and the <b>University"
+" of São Paulo Support Foundation</b>."
 
 #: templates/colecao.html:18
 #, python-format
@@ -166,8 +167,8 @@ msgid ""
 " retratados nos objetos do acervo do Museu do Ipiranga"
 msgstr ""
 "Identify the <a target=\"_blank\" title=\"motif (visual arts)\" "
-"href=\"https://en.wikipedia.org/wiki/Motif_(visual_arts)\">motifs</a> depicted "
-"in objects of the Ipiranga Museum collection."
+"href=\"https://en.wikipedia.org/wiki/Motif_(visual_arts)\">motifs</a> "
+"depicted in objects of the Ipiranga Museum collection."
 
 #: templates/inicio.html:29
 msgid ""
@@ -336,8 +337,8 @@ msgid ""
 "title='Motivo (artes plásticas)'>motivo</a> deseja declarar:"
 msgstr ""
 "Choose which category of <a target=\"_blank\" "
-"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' "
-"title='Motif (visual arts)'>motif</a> you want to declare:"
+"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' title='Motif "
+"(visual arts)'>motif</a> you want to declare:"
 
 #: templates/item.html:310
 msgid "Animais, plantas e flores"
@@ -359,23 +360,24 @@ msgid ""
 "disponíveis, pesquise-a pelo nome no banco de dados."
 msgstr ""
 "If the object has a identifiable <a target=\"_blank\" "
-"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' "
-"title='Motif (visual arts)'>motif</a>  in the images "
-"available, search it by the name in the database."
+"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' title='Motif "
+"(visual arts)'>motif</a>  in the images available, search it by the name "
+"in the database."
 
 #: templates/item.html:344
 msgid ""
 "Caso o motivo não esteja cadastrado, selecione a opção <i>\"Informar "
 "motivo faltante\"</i>."
 msgstr ""
-"If the motif is not registered, select the option <i>\"Inform "
-"missing motif\"</i>. "
+"If the motif is not registered, select the option <i>\"Inform missing "
+"motif\"</i>. "
 
 #: templates/item.html:345
 msgid "Nos casos em que o objeto não possua um motivo, selecione a opção"
 msgstr "In cases where the object does not have a motif, select the option"
 
-#: templates/item.html:346 templates/item.html:366 templates/item.html:498
+#: templates/item.html:346 templates/item.html:366 templates/item.html:412
+#: templates/item.html:465 templates/item.html:496
 msgid "Objeto não apresenta motivos"
 msgstr "Object has no motif"
 
@@ -388,7 +390,7 @@ msgid "Selecione uma opção:"
 msgstr "Select an option:"
 
 #: templates/item.html:362 templates/item.html:411 templates/item.html:464
-#: templates/item.html:497
+#: templates/item.html:495
 msgid "Informar motivo faltante"
 msgstr "Report missing motif"
 
@@ -414,11 +416,11 @@ msgstr ""
 msgid "Pesquisando o banco de dados..."
 msgstr "Searching the database..."
 
-#: templates/item.html:499
+#: templates/item.html:497
 msgid "Nenhum resultado obtido"
 msgstr "No result found"
 
-#: templates/item.html:518
+#: templates/item.html:516
 msgid "Selecione um elemento"
 msgstr "Select an item"
 
@@ -434,9 +436,8 @@ msgid ""
 "acervo do Museu do Ipiranga."
 msgstr ""
 "Are you ready to be a collection researcher? This is what the <b>Wiki "
-"Museu do Ipiranga - What is depicted?</b> app offers you: "
-"develop your research skills and learn more about the Ipiranga Museum "
-"collection."
+"Museu do Ipiranga - What is depicted?</b> app offers you: develop your "
+"research skills and learn more about the Ipiranga Museum collection."
 
 #: templates/sobre.html:17
 msgid ""
@@ -450,9 +451,10 @@ msgstr ""
 "Curating the collection is one of the most important activities of the "
 "museum. Here, researchers -- and now you! -- look at the objects in the "
 "collection to identify their origin, what they portray, the history of "
-"the piece. In the application <b>Wiki Museu do Ipiranga - What is depicted?</b>, "
-"you participate in this curatorial work, describing the clothes and accessories "
-"of the people portrayed in objects at the Museu do Ipiranga."
+"the piece. In the application <b>Wiki Museu do Ipiranga - What is "
+"depicted?</b>, you participate in this curatorial work, describing the "
+"clothes and accessories of the people portrayed in objects at the Museu "
+"do Ipiranga."
 
 #: templates/sobre.html:18
 msgid ""
@@ -550,4 +552,3 @@ msgstr "Menu"
 #: templates/tutorial.html:9
 msgid "Tutorial"
 msgstr "Tutorial"
-
