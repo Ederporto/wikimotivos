@@ -224,8 +224,12 @@ def filter_by_category(data, cat):
     filtered_items = []
 
     categories = {
-        "Animais, plantas e flores": "SELECT DISTINCT ?item WHERE {VALUES ?item {" + qids + "} {?item wdt:P31 wd:Q16521.} UNION {?item wdt:P279/wdt:P279* wd:Q16521} UNION {?item wdt:P31 wd:Q55983715.} UNION {?item wdt:P31/wdt:P279 wd:Q38829} }",
-        "Seres fantásticos": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P31/wdt:P279* wd:Q21070598.} UNION {?item wdt:P31/wdt:P279* wd:Q24334685.} UNION {?item wdt:P31/wdt:P279* wd:Q95074.}}"
+        "Animais, plantas e flores": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P31 wd:Q16521.} UNION {?item wdt:P279/wdt:P279* wd:Q16521.} UNION {?item wdt:P279/wdt:P31 wd:Q55983715.} UNION {?item wdt:P31/wdt:P279 wd:Q38829.} OPTIONAL{?item wdt:P105 ?class.} BIND(IF(BOUND(?class), IF (?class != wd:Q7432, FALSE, TRUE), TRUE) AS ?decision) FILTER(?decision) }",
+        "Seres fantásticos": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P31/wdt:P279* wd:Q21070598.} UNION {?item wdt:P31/wdt:P279* wd:Q24334685.} UNION {?item wdt:P31/wdt:P279* wd:Q95074.}}",
+        "Pedras e minerais": "SELECT DISTINCT ?item WHERE { {?item wdt:P31|wdt:P279 wd:Q12089225.} UNION {?item wdt:P279/wdt:P279* wd:Q8063.} }",
+        "Fungos": "SELECT DISTINCT ?item WHERE {VALUES ?item {" + qids + "} ?item wdt:P171/wdt:P171* wd:Q764.}",
+        "Cabelos, barbas e bigodes": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item_ wdt:P8839 ?item.} UNION {?item wdt:P31|wdt:P279* wd:Q327496.} UNION {?item wdt:P31|wdt:P279* wd:Q42804.} UNION {?item wdt:P31|wdt:P279* wd:Q15179.} }",
+        "Transporte": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P279* wd:Q334166.} }"
     }
 
     if cat in categories:

@@ -152,8 +152,8 @@
                     <tr>
                         <th>{{ _("Dimensões") }}</th>
                         <td>
-                            {% set elem_parts_altura = metadata.altura.split('@') %}
-                            {% set elem_parts_altura = metadata.largura.split('@') %}
+                            {% set elem_parts_altura = metadata.altura[0].split('@') %}
+                            {% set elem_parts_largura = metadata.largura[0].split('@') %}
                             {{ elem_parts_altura[0] }} {{ elem_parts_altura[1] }}
                             &times; {{ elem_parts_largura[0] }} {{ elem_parts_largura[1] }}
                         </td>
@@ -316,10 +316,23 @@
                                 <button type="submit" id="selectcategory" class="btn btn-primary"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
-                                        data-cat="Outros" data-target="#addModal"
-                                        data-dismiss="modal"
-                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Outros") }}</button>
-
+                                        data-cat="Pedras" data-target="#addModal" data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Pedras e minerais") }}</button>
+                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                        data-toggle="modal"
+                                        data-qid="{{ qid }}"
+                                        data-cat="Fungos" data-target="#addModal" data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Fungos") }}</button>
+                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                        data-toggle="modal"
+                                        data-qid="{{ qid }}"
+                                        data-cat="Cabelos, barbas e bigodes" data-target="#addModal" data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Cabelos, barbas e bigodes") }}</button>
+                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                        data-toggle="modal"
+                                        data-qid="{{ qid }}"
+                                        data-cat="Transporte" data-target="#addModal" data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Transporte") }}</button>
                             </div>
                         </div>
                     </div>
