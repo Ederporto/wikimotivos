@@ -224,20 +224,37 @@ def filter_by_category(data, cat):
     filtered_items = []
 
     categories = {
-        "Animais, plantas e flores": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P31 wd:Q16521.} UNION {?item wdt:P279/wdt:P279* wd:Q16521.} UNION {?item wdt:P279/wdt:P31 wd:Q55983715.} UNION {?item wdt:P31/wdt:P279 wd:Q38829.} OPTIONAL{?item wdt:P105 ?class.} BIND(IF(BOUND(?class), IF (?class != wd:Q7432, FALSE, TRUE), TRUE) AS ?decision) FILTER(?decision) }",
-        "Seres fantásticos": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P31/wdt:P279* wd:Q21070598.} UNION {?item wdt:P31/wdt:P279* wd:Q24334685.} UNION {?item wdt:P31/wdt:P279* wd:Q95074.}}",
-        "Pedras e minerais": "SELECT DISTINCT ?item WHERE { {?item wdt:P31|wdt:P279 wd:Q12089225.} UNION {?item wdt:P279/wdt:P279* wd:Q8063.} }",
-        "Fungos": "SELECT DISTINCT ?item WHERE {VALUES ?item {" + qids + "} ?item wdt:P171/wdt:P171* wd:Q764.}",
-        "Cabelos, barbas e bigodes": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item_ wdt:P8839 ?item.} UNION {?item wdt:P31|wdt:P279* wd:Q327496.} UNION {?item wdt:P31|wdt:P279* wd:Q42804.} UNION {?item wdt:P31|wdt:P279* wd:Q15179.} }",
-        "Transporte": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P279* wd:Q334166.} }"
+        "Elementos da natureza": "SELECT DISTINCT ?item (SAMPLE(STR(?itemLabelptbr)) AS ?labelptbr) (SAMPLE(STR(?itemDescriptionptbr)) AS ?descrptbr) (SAMPLE(STR(?itemLabelpt)) AS ?labelpt) (SAMPLE(STR(?itemDescriptionpt)) AS ?descrpt) (SAMPLE(STR(?itemLabelen)) AS ?labelen) (SAMPLE(STR(?itemDescriptionen)) AS ?descren) WITH { SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} { ?item wdt:P31 wd:Q16521. } UNION { ?item (wdt:P279/(wdt:P279*)) wd:Q16521. } UNION { ?item (wdt:P279/wdt:P31) wd:Q55983715. } UNION { ?item wdt:P31 wd:Q55983715. } UNION { ?item wdt:P31 wd:Q16521. } UNION { ?item (wdt:P31/wdt:P279) wd:Q38829. } UNION {?item wdt:P31 wd:Q12089225.} UNION {?item wdt:P279/wdt:P31* wd:Q12089225.} UNION {?item wdt:P279/wdt:P279* wd:Q8063.} UNION {?item wdt:P361 wd:Q764.}}} AS %items WHERE { INCLUDE %items. OPTIONAL{?item rdfs:label ?itemLabelptbr. FILTER(LANG(?itemLabelptbr)='pt-br')} OPTIONAL{?item schema:description ?itemDescriptionptbr. FILTER(LANG(?itemDescriptionptbr)='pt-br')} OPTIONAL{?item rdfs:label ?itemLabelpt. FILTER(LANG(?itemLabelpt)='pt')} OPTIONAL{?item schema:description ?itemDescriptionpt. FILTER(LANG(?itemDescriptionpt)='pt')} OPTIONAL{?item rdfs:label ?itemLabelen. FILTER(LANG(?itemLabelen)='en')} OPTIONAL{?item schema:description ?itemDescriptionen. FILTER(LANG(?itemDescriptionen)='en')}} GROUP BY ?item",
+        "Ornamentos arquitetônicos": "SELECT DISTINCT ?item (SAMPLE(STR(?itemLabelptbr)) AS ?labelptbr) (SAMPLE(STR(?itemDescriptionptbr)) AS ?descrptbr) (SAMPLE(STR(?itemLabelpt)) AS ?labelpt) (SAMPLE(STR(?itemDescriptionpt)) AS ?descrpt) (SAMPLE(STR(?itemLabelen)) AS ?labelen) (SAMPLE(STR(?itemDescriptionen)) AS ?descren) WITH { SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P279? wd:Q183272.} UNION {?item wdt:P279? wd:Q12277.} UNION {?item wdt:P279/wdt:P279* wd:Q391414.}}} AS %items WHERE { INCLUDE %items. OPTIONAL{?item rdfs:label ?itemLabelptbr. FILTER(LANG(?itemLabelptbr)='pt-br')} OPTIONAL{?item schema:description ?itemDescriptionptbr. FILTER(LANG(?itemDescriptionptbr)='pt-br')} OPTIONAL{?item rdfs:label ?itemLabelpt. FILTER(LANG(?itemLabelpt)='pt')} OPTIONAL{?item schema:description ?itemDescriptionpt. FILTER(LANG(?itemDescriptionpt)='pt')} OPTIONAL{?item rdfs:label ?itemLabelen. FILTER(LANG(?itemLabelen)='en')} OPTIONAL{?item schema:description ?itemDescriptionen. FILTER(LANG(?itemDescriptionen)='en')}} GROUP BY ?item",
+        "Seres mitológicos": "SELECT DISTINCT ?item (SAMPLE(STR(?itemLabelptbr)) AS ?labelptbr) (SAMPLE(STR(?itemDescriptionptbr)) AS ?descrptbr) (SAMPLE(STR(?itemLabelpt)) AS ?labelpt) (SAMPLE(STR(?itemDescriptionpt)) AS ?descrpt) (SAMPLE(STR(?itemLabelen)) AS ?labelen) (SAMPLE(STR(?itemDescriptionen)) AS ?descren) WITH {SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P31/wdt:P279* wd:Q21070598.} UNION {?item wdt:P31/wdt:P279* wd:Q24334685.} UNION {?item wdt:P31/wdt:P279* wd:Q95074.}}} AS %items WHERE { INCLUDE %items. OPTIONAL{?item rdfs:label ?itemLabelptbr. FILTER(LANG(?itemLabelptbr)='pt-br')} OPTIONAL{?item schema:description ?itemDescriptionptbr. FILTER(LANG(?itemDescriptionptbr)='pt-br')} OPTIONAL{?item rdfs:label ?itemLabelpt. FILTER(LANG(?itemLabelpt)='pt')} OPTIONAL{?item schema:description ?itemDescriptionpt. FILTER(LANG(?itemDescriptionpt)='pt')} OPTIONAL{?item rdfs:label ?itemLabelen. FILTER(LANG(?itemLabelen)='en')} OPTIONAL{?item schema:description ?itemDescriptionen. FILTER(LANG(?itemDescriptionen)='en')}} GROUP BY ?item",
+        "Transporte": "SELECT DISTINCT ?item (SAMPLE(STR(?itemLabelptbr)) AS ?labelptbr) (SAMPLE(STR(?itemDescriptionptbr)) AS ?descrptbr) (SAMPLE(STR(?itemLabelpt)) AS ?labelpt) (SAMPLE(STR(?itemDescriptionpt)) AS ?descrpt) (SAMPLE(STR(?itemLabelen)) AS ?labelen) (SAMPLE(STR(?itemDescriptionen)) AS ?descren) WITH { SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item wdt:P279* wd:Q334166.} UNION {?item wdt:P31/wdt:P279* wd:Q334166} UNION {?item wdt:P279/wdt:P31 wd:Q334166}}} AS %items WHERE { INCLUDE %items. OPTIONAL{?item rdfs:label ?itemLabelptbr. FILTER(LANG(?itemLabelptbr)='pt-br')} OPTIONAL{?item schema:description ?itemDescriptionptbr. FILTER(LANG(?itemDescriptionptbr)='pt-br')} OPTIONAL{?item rdfs:label ?itemLabelpt. FILTER(LANG(?itemLabelpt)='pt')} OPTIONAL{?item schema:description ?itemDescriptionpt. FILTER(LANG(?itemDescriptionpt)='pt')} OPTIONAL{?item rdfs:label ?itemLabelen. FILTER(LANG(?itemLabelen)='en')} OPTIONAL{?item schema:description ?itemDescriptionen. FILTER(LANG(?itemDescriptionen)='en')}} GROUP BY ?item",
+        # "Cabelos, barbas e bigodes": "SELECT DISTINCT ?item WHERE { VALUES ?item {" + qids + "} {?item_ wdt:P8839 ?item.} UNION {?item wdt:P31|wdt:P279* wd:Q327496.} UNION {?item wdt:P31|wdt:P279* wd:Q42804.} UNION {?item wdt:P31|wdt:P279* wd:Q15179.} }",
     }
 
-    if cat in categories:
+    if cat in categories and cat != "Outros":
         _filter = query_wikidata(categories[cat])
         results = _filter["results"]["bindings"]
-        filtered_items = [x["item"]["value"].replace("http://www.wikidata.org/entity/", "") for x in results]
+        filtered_items = extract_items(results)
     else:
-        filtered_items = [x["id"] for x in data["search"]]
-    new_data = [search_result for search_result in data["search"] if search_result["id"] in filtered_items]
+        filtered_items = [{"id": x["id"],
+                           "labelpt": x["label"] if "label" in x else "",
+                           "labelen": x["label"] if "label" in x else "",
+                           "descrpt": x["description"] if "description" in x else "",
+                           "descren": x["description"] if "description" in x else ""} for x in data["search"]]
+    # new_data = [search_result for search_result in data["search"] if search_result["id"] in filtered_items]
 
-    return new_data
+    return filtered_items
+
+
+def extract_items(results):
+    items = []
+    for result in results:
+        items.append({"id": result["item"]["value"].replace("http://www.wikidata.org/entity/", ""),
+                      "labelptbr": result["labelptbr"]["value"] if "labelptbr" in result else "",
+                      "labelpt": result["labelpt"]["value"] if "labelpt" in result else "",
+                      "labelen": result["labelen"]["value"] if "labelen" in result else "",
+                      "descrptbr": result["descrptbr"]["value"] if "descrptbr" in result else "",
+                      "descrpt": result["descrpt"]["value"] if "descrpt" in result else "",
+                      "descren": result["descren"]["value"] if "descren" in result else "",
+                      })
+    return items

@@ -348,9 +348,11 @@ def search_entity():
         new_data = filter_by_category(data, cat)
         items = []
         for item_ in new_data:
+            item_["labelptbr"] = item_["labelpt"] if not item_["labelptbr"] else item_["labelptbr"]
+            item_["descrptbr"] = item_["descrpt"] if not item_["descrptbr"] else item_["descrptbr"]
             items.append({"qid": item_["id"],
-                          "label": item_["label"] if 'label' in item_ else '',
-                          "descr": item_["description"] if 'description' in item_ else ''})
+                          "label": item_["labelptbr"] if lang != "en" else item_["labelen"],
+                          "descr": item_["descrptbr"] if lang != "en" else item_["descren"]})
 
         return jsonify(items), 200
 

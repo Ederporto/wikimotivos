@@ -169,3 +169,26 @@ tbody {
     transition: transform .6s ease;
     transition: transform .6s ease,-webkit-transform .6s ease;
 }
+
+.owl-prev, .owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block !important;
+    border: 0px solid #434343;
+}
+
+.owl-prev {
+    left: 20px;
+}
+
+.owl-next {
+    right: 20px;
+}
+
+.owl-prev i, .owl-next i {
+    transform: scale(2, 2);
+    color: #434343;
+}
