@@ -3,7 +3,7 @@ import os
 import json
 import requests
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify, g
-from flask_babel import Babel
+from flask_babel import Babel, gettext
 from wikidata import query_by_type, query_metadata_of_work, query_motifs_metadata, post_search_entity, \
     api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid, filter_by_category
 from oauth_wikidata import get_username, get_token
@@ -253,9 +253,27 @@ def add_statement():
         data = request.get_json()
         qid = data['id']
         pid = data['tipo']  # Tipo de qualificador
+        edit_claim = data['edit_claim'] if "edit_claim" in data else ''
         username = get_username()
         today = datetime.today().strftime('%Y-%m-%dT%H:%M:%S')
 
+        if edit_claim:
+            claim = data['edit_claim']
+            new_qid = data['claim'].replace("Q", "")
+            token = get_token()
+
+            if pid != 'unknownvalue' and pid != 'novalue':
+                params = {
+                    "action": "wbsetclaimvalue",
+                    "claim": claim,
+                    "snaktype": "value",
+                    "token": token,
+                    "value": "{\"entity-type\":\"item\",\"numeric-id\":" + str(new_qid) + "}"
+                }
+
+                api_post_request(params)
+
+                return jsonify(gettext(u'Declaração inserida com sucesso!'))
         if pid == 'P180':
             snaktype = 'value'
             token = get_token()
@@ -269,28 +287,24 @@ def add_statement():
                 "token": token
             }
 
-            if pid == 'P180':
-                claim = data['claim'].replace("Q", "")
-                params["value"] = "{\"entity-type\":\"item\",\"numeric-id\":" + str(claim) + "}"
-            else:
-                return jsonify("204")
+            claim = data['claim'].replace("Q", "")
+            params["value"] = "{\"entity-type\":\"item\",\"numeric-id\":" + str(claim) + "}"
 
-            results = api_post_request(params)
+            api_post_request(params)
 
-            if pid == 'P180':
-                stat_id = get_claim(qid, pid, claim)
-                new_params = {
-                    "action": "wbsetqualifier",
-                    "format": "json",
-                    "claim": stat_id,
-                    "property": 'P3831',
-                    "value": "{\"entity-type\":\"item\",\"numeric-id\":1229071}",
-                    "snaktype": "value",
-                    "token": token
-                }
-                api_post_request(new_params)
+            stat_id = get_claim(qid, pid, claim)
+            new_params = {
+                "action": "wbsetqualifier",
+                "format": "json",
+                "claim": stat_id,
+                "property": 'P3831',
+                "value": "{\"entity-type\":\"item\",\"numeric-id\":1229071}",
+                "snaktype": "value",
+                "token": token
+            }
+            api_post_request(new_params)
 
-            return jsonify(results.status_code)
+            return jsonify(gettext(u'Declaração inserida com sucesso!'))
         elif pid == 'unknownvalue':
             with open(os.path.join(app.static_folder, 'unknownmotifs.json'), encoding="utf-8") as file:
                 values = json.load(file)
@@ -300,7 +314,7 @@ def add_statement():
                     values[qid] = [{"user": username, "data": today}]
             with open(os.path.join(app.static_folder, 'unknownmotifs.json'), 'w', encoding="utf-8") as file:
                 json.dump(values, file, ensure_ascii=False)
-            return jsonify("200")
+            return jsonify(gettext(u'Sua declaração foi inserida com sucesso no nosso banco de dados para análise!'))
         elif pid == 'novalue':
             with open(os.path.join(app.static_folder, 'nomotifs.json'), encoding="utf-8") as file:
                 values = json.load(file)
@@ -310,11 +324,11 @@ def add_statement():
                     values[qid] = [{"user": username, "data": today}]
             with open(os.path.join(app.static_folder, 'nomotifs.json'), 'w', encoding="utf-8") as file:
                 json.dump(values, file, ensure_ascii=False)
-            return jsonify("200")
+            return jsonify(gettext(u'Sua declaração foi inserida com sucesso no nosso banco de dados!'))
         else:
-            return jsonify("204")
+            return jsonify(gettext(u"'Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues'"))
     else:
-        return jsonify("204")
+        return jsonify(gettext(u"'Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues'"))
 
 
 def get_claim(qid, pid, val):

@@ -19,16 +19,18 @@
     <div class="w3-row">
         <div id="image" class="w3-container w3-half">
             {% if category_images|length > 0 %}
-                 <div class="owl-carousel owl-theme">
+                <div class="owl-carousel owl-theme">
                     <span class="img_span" style="display: inline-block; position: relative; overflow: hidden;">
                         <img style="display: block" class="owl-lazy image_item"
-                             alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %} - {{ category_images[0] }}"
+                             alt="
+                                     {% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %} - {{ category_images[0] }}"
                              data-src="https://commons.wikimedia.org/wiki/Special:FilePath/{{ category_images[0] }}?width=2000px">
                     </span>
                     {% for imagem_categoria in category_images[1:] %}
                         <span class="img_span" style="display: inline-block; position: relative; overflow: hidden;">
                             <img class="owl-lazy image_item"
-                                 alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %} - {{ imagem_categoria }}"
+                                 alt="
+                                         {% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %} - {{ imagem_categoria }}"
                                  data-src="https://commons.wikimedia.org/wiki/Special:FilePath/{{ imagem_categoria }}?width=2000px">
                         </span>
                     {% endfor %}
@@ -40,7 +42,8 @@
                 <div class="owl-carousel owl-theme">
                     <span class="img_span" style="display: inline-block; position: relative; overflow: hidden;">
                         <img style="display: block;max-width: 100%" class="owl-lazy image_item"
-                             alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %}"
+                             alt="
+                                     {% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %}"
                              data-src="https://commons.wikimedia.org/wiki/Special:FilePath/{{ metadata.imagem[0] }}?width=2000px">
                     </span>
                 </div>
@@ -271,6 +274,13 @@
                                 {{ _("Ir para declaração") }}
                             </button>
                         </a>
+                        {% if username %}
+                            <a id="editstatement" class="button" title="{{ _('Editar declaração') }}">
+                                <button id="editstatement_button" type="button" class="btn btn-primary"
+                                        data-toggle="modal" data-qid="{{ qid }}" data-dismiss="modal"
+                                        data-target="#selectModal" style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Editar declaração") }}</button>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -290,30 +300,30 @@
                         <div class="w3-row">
                             <div class="w3-container w3-quarter"></div>
                             <div class="w3-container w3-half">
-                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                <button type="submit" id="selectcategory" class="btn btn-primary selectcategory"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
                                         data-cat="Elementos da natureza" data-target="#addModal"
                                         data-dismiss="modal"
                                         style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Elementos da natureza") }}</button>
-                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                <button type="submit" id="selectcategory" class="btn btn-primary selectcategory"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
                                         data-cat="Ornamentos arquitetônicos" data-target="#addModal"
                                         data-dismiss="modal"
                                         style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Ornamentos arquitetônicos") }}</button>
-                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                <button type="submit" id="selectcategory" class="btn btn-primary selectcategory"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
                                         data-cat="Seres mitológicos" data-target="#addModal"
                                         data-dismiss="modal"
                                         style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Seres mitológicos") }}</button>
-                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                <button type="submit" id="selectcategory" class="btn btn-primary selectcategory"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
                                         data-cat="Transporte" data-target="#addModal" data-dismiss="modal"
                                         style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Transporte") }}</button>
-                                <button type="submit" id="selectcategory" class="btn btn-primary"
+                                <button type="submit" id="selectcategory" class="btn btn-primary selectcategory"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
                                         data-cat="Outros" data-target="#addModal" data-dismiss="modal"
@@ -389,7 +399,22 @@
             $(this).find(".modal-body #statement_descr").text(stat_descr);
 
             $(this).find(".modal-footer #gotostatement").attr('href', stat_id);
+            $(this).find(".modal-footer #editstatement_button").attr('data-stat-id', stat_id.split("#")[1]);
         });
+
+        $('#selectModal').on('show.bs.modal',function (event){
+            var stat_id = $(event.relatedTarget).attr('data-stat-id');
+            if (stat_id){
+                $('.selectcategory').each(function (){
+                    $(this).attr('data-stat-id', stat_id);
+                })}
+        })
+
+        $('#selectModal').on('hidden.bs.modal',function (){
+           $('.selectcategory').each(function (){
+                    $(this).attr('data-stat-id', "");
+                })
+        })
 
         $('#addModal').on('show.bs.modal', function (event) {
             var stat_qid = $(event.relatedTarget).attr('data-stat-id');
@@ -425,15 +450,15 @@
         })
 
         $('#addstatement').on('click', function () {
-            var sucesso = "{{ _('Declaração inserida com sucesso!') }}";
-            var erro = "{{ _('Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues')}}";
             var claim = $("input[name='claim_option']:checked").val();
             var tipo = $("input[name='claim_option']:checked").attr('data-tipo');
             var qid = $(this).attr('data-qid');
+            var editclaim = $(this).attr('data-stat-id');
             var data = {
                 'id': qid,
                 'tipo': tipo,
                 'claim': claim,
+                'edit_claim': editclaim
             }
             $.ajax({
                 url: "/add_stat",
@@ -442,12 +467,12 @@
                 contentType: "application/json",
                 dataType: "json",
 
-                success: function () {
-                    alert(sucesso);
+                success: function (response) {
+                    alert(response);
                     $('#addModal').modal('hide');
                 },
-                error: function () {
-                    alert(erro);
+                error: function (response) {
+                    alert(response);
                 }
             });
         });
@@ -503,7 +528,11 @@
 
                     if (response.length > 0) {
                         for (var i = 0; i < (Math.min(15, response.length)); i++) {
-                            if (response[i]["descr"]){var sep = ': ';} else {var sep = '';}
+                            if (response[i]["descr"]) {
+                                var sep = ': ';
+                            } else {
+                                var sep = '';
+                            }
                             $("#search_results").append('<input type="radio" id="' + response[i]["qid"] + '" name="claim_option" data-tipo="P180" value="' + response[i]["qid"] + '"> ' +
                                 '<label for="' + response[i]["qid"] + '" style="font-size: 125%"><b style="color: #004266;font-size: 125%">' + response[i]["label"] + ' (' + response[i]["qid"] + ')</b></label>' + sep + response[i]["descr"] + '<br>');
                         }
@@ -517,13 +546,13 @@
             });
         };
 
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('.owl-item.active .owl-lazy.image_item')
                 .parent()
                 .zoom();
         })
 
-        $('.owl-lazy.image_item').hover(function (){
+        $('.owl-lazy.image_item').hover(function () {
             $(this)
                 .parent()
                 .zoom();
