@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-21 13:09-0300\n"
+"POT-Creation-Date: 2021-05-21 15:40-0300\n"
 "PO-Revision-Date: 2021-05-09 22:31-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -34,57 +34,107 @@ msgstr ""
 "theaim to invite you to work in the investigation and curation workof the"
 " items and objects from the Ipiranga Museum collection."
 
-#: templates/apps.html:30 templates/apps.html:34
+#: templates/apps.html:31 templates/apps.html:35
 msgid "Logotipo Wiki Museu do Ipiranga - Quantos tem?"
 msgstr "Logo of Wiki Museu do Ipiranga - How many?"
 
-#: templates/apps.html:41
+#: templates/apps.html:43
 msgid ""
-"O primeiro aplicativo, <b>Quantos tem?</b> te convida a contar quantos "
-"elementos estão presentes nas obras do acervo do Museu do Ipiranga."
+"<b>Quantos tem?</b> te convida a contar quantos elementos estão presentes"
+" nas obras do acervo do Museu do Ipiranga."
 msgstr ""
-"The first app, <b>How many?</b> invites you to count how many elements "
+"<b>How many?</b> invites you to count how many elements "
 "are present in the works of the Ipiranga Museum collection."
 
-#: templates/apps.html:51 templates/apps.html:55
+#: templates/apps.html:44
+msgid ""
+"Por exemplo, quantos cordeiros estão retratados no quadro <a "
+"target=\"_blank\" href=\"https://www.wikidata.org/Q52303216\"><i>Mulher "
+"na Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, de"
+" <a target=\"_blank\" "
+"href=\"https://pt.wikipedia.org/Adrien_Henri_Vital_van_Emelen\">Adrien "
+"Henri Vital van Emelen</a>?"
+msgstr ""
+"For example, how many lambs are depicted in the painting <a "
+"target=\"_blank\" href=\"https://www.wikidata.org/Q52303216\"><i>Mulher "
+"na Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, by "
+" <a target=\"_blank\" "
+"href=\"https://en.wikipedia.org/Adrien_Henri_Vital_van_Emelen\">Adrien "
+"Henri Vital van Emelen</a>?"
+
+#: templates/apps.html:55 templates/apps.html:59
 msgid "Logotipo Wiki Museu do Ipiranga - Com que roupa eu vou?"
 msgstr "Logo of Wiki Museu do Ipiranga - What clothes should I wear?"
 
-#: templates/apps.html:62
+#: templates/apps.html:67
 msgid ""
-"O segundo aplicativo, <b>Com que roupa eu vou?</b> te convida a descrever"
-" as roupas e os acessórios das pessoas retratadas em obras do acervo do "
-"Museu do Ipiranga."
+"<b>Com que roupa eu vou?</b> te convida a descrever as roupas e os "
+"acessórios das pessoas retratadas em obras do acervo do Museu do "
+"Ipiranga."
 msgstr ""
-"The second app, <b>What clothes should I wear?</b> invites you to "
-"describe the clothes and accessories of the people portrayed in works "
-"from the collection ofIpiranga Museum."
+"<b>What clothes should I wear?</b> invites you to describe the "
+"clothes and accessories of the people portrayed in works "
+"from the collection of Ipiranga Museum."
 
-#: templates/apps.html:72 templates/apps.html:76
+#: templates/apps.html:68
+msgid ""
+"Por exemplo, quais acessórios são usados por Dona Jessy de Souza Queiroz "
+"em seu <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q52302832\"><i>retrato</i></a> por <a "
+"target=\"_blank\" href=\"https://pt.wikipedia.org/Karl_Ernst_Papf\">Karl "
+"Ernst Papf</a>?"
+msgstr ""
+"For example, what accessories are used by Dona Jessy de Souza Queiroz "
+"in her <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q52302832\"><i>portrait</i></a> by <a "
+"target=\"_blank\" href=\"https://en.wikipedia.org/Karl_Ernst_Papf\">Karl "
+"Ernst Papf</a>?"
+
+#: templates/apps.html:79 templates/apps.html:83
 msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
 msgstr "Logo of Wiki Museu do Ipiranga - Which brand?"
 
-#: templates/apps.html:83
+#: templates/apps.html:91
 msgid ""
-"O terceiro aplicativo, <b>Qual a marca?</b> te convida a identificar as "
-"marcas de objetos do acervo do Museu do Ipiranga."
+"<b>Qual a marca?</b> te convida a identificar as marcas de objetos do "
+"acervo do Museu do Ipiranga."
 msgstr ""
-"Identify brands on objects of the Ipiranga Museum collectionThe third "
-"application, <b>Which brand?</b> invites you to identify the brand of "
+"<b>Which brand?</b> invites you to identify the brand of "
 "objects from the Ipiranga Museum collection."
 
-#: templates/apps.html:93 templates/apps.html:97 templates/base.html:39
-#: templates/base.html:41
-msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
-msgstr "Logo of Wiki Museu do Ipiranga - What is depicted?"
-
-#: templates/apps.html:104
+#: templates/apps.html:92
 msgid ""
-"O quarto aplicativo, <b>O que retrata?</b> te convida a identificar os "
-"motivos representados em objetos do acervo do Museu do Ipiranga."
+"Por exemplo, qual a marca do brinquedo <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q65033132\"><i>Trem de luxo Nº2</i></a>?"
 msgstr ""
-"The fourth application, <b>What is depited?</b> invites you to identify "
-"the motifs represented in objects from the Ipiranga Museum collection."
+"For example, which is the brand of the toy <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q65033132\"><i>Trem de luxo Nº2</i></a>?"
+
+#: templates/apps.html:103 templates/apps.html:107
+msgid "Logotipo Wiki Museu do Ipiranga - Qual o ornamento?"
+msgstr "Logo of Wiki Museu do Ipiranga - What is the ornament?"
+
+#: templates/apps.html:115
+msgid ""
+"<b>O que retrata?</b> te convida a identificar os motivos representados "
+"em objetos do acervo do Museu do Ipiranga."
+msgstr ""
+"<b>What is depited?</b> invites you to identify the motifs represented "
+"in objects from the Ipiranga Museum collection."
+
+#: templates/apps.html:116
+msgid ""
+"Por exemplo, qual tipo de flor está representada numa <a "
+"target=\"_blank\" href=\"https://www.wikidata.org/Q106210419\"><i>sopeira"
+" com tampa</i></a> produzida pelas <a target=\"_blank\" "
+"href=\"https://pt.wikipedia.org/Indústrias_Reunidas_Fábricas_Matarazzo\">Indústrias"
+" Reunidas Fábricas Matarazzo</a>?"
+msgstr ""
+"For example, what type of flower is represented in a <a "
+"target=\"_blank\" href=\"https://www.wikidata.org/Q106210419\"><i>tureen "
+"with lid</i></a> produced by <a target=\"_blank\" "
+"href=\"https://pt.wikipedia.org/Indústrias_Reunidas_Fábricas_Matarazzo\">Indústrias"
+" Reunidas Fábricas Matarazzo</a>?"
 
 #: templates/base.html:20 templates/colecao.html:21 templates/inicio.html:9
 #: templates/topnavbar.html:2
@@ -94,6 +144,10 @@ msgstr "Homepage"
 #: templates/base.html:20
 msgid "Wiki Museu do Ipiranga - O que retrata?"
 msgstr "Wiki Museu do Ipiranga - Which brand?"
+
+#: templates/base.html:39 templates/base.html:41
+msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
+msgstr "Logo of Wiki Museu do Ipiranga - What is depicted?"
 
 #: templates/base.html:50
 msgid "Projeto Novo Museu do Ipiranga"
@@ -418,16 +472,18 @@ msgstr "Statement successfully registered!"
 msgid ""
 "Sua declaração foi inserida com sucesso no nosso banco de dados para "
 "análise!"
-msgstr "Your statement has been successfully registered into our database "
-"for analysis!"
+msgstr ""
+"Your statement has been successfully registered into our database for "
+"analysis!"
 
 #: templates/item.html:452
 msgid ""
 "Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
 "persista, por favor, reporte em "
 "https://github.com/WikiMovimentoBrasil/wikimotivos/issues"
-msgstr "Something went wrong! Verify that you selected a option. "
-"If the error persists, please, report in "
+msgstr ""
+"Something went wrong! Verify that you selected a option. If the error "
+"persists, please, report in "
 "https://github.com/WikiMovimentoBrasil/wikimotivos/issues"
 
 #: templates/item.html:490
