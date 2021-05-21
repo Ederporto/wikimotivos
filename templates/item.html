@@ -404,16 +404,13 @@
 
         $('#selectModal').on('show.bs.modal',function (event){
             var stat_id = $(event.relatedTarget).attr('data-stat-id');
+            $('.selectcategory').each(function (){
+                $(this).attr('data-stat-id', "");
+            })
             if (stat_id){
                 $('.selectcategory').each(function (){
                     $(this).attr('data-stat-id', stat_id);
                 })}
-        })
-
-        $('#selectModal').on('hidden.bs.modal',function (){
-           $('.selectcategory').each(function (){
-                    $(this).attr('data-stat-id', "");
-                })
         })
 
         $('#addModal').on('show.bs.modal', function (event) {
@@ -450,6 +447,9 @@
         })
 
         $('#addstatement').on('click', function () {
+            var success_ = "{{ _('Declaração inserida com sucesso!') }}";
+            var success_db = "{{ _('Sua declaração foi inserida com sucesso no nosso banco de dados para análise!') }}";
+            var error_ = "{{ _('Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues') }}";
             var claim = $("input[name='claim_option']:checked").val();
             var tipo = $("input[name='claim_option']:checked").attr('data-tipo');
             var qid = $(this).attr('data-qid');
@@ -468,11 +468,12 @@
                 dataType: "json",
 
                 success: function (response) {
-                    alert(response);
+                    if(response==="Declaração inserida com sucesso!"){alert (success_);}
+                    else{alert(success_db);}
                     $('#addModal').modal('hide');
                 },
-                error: function (response) {
-                    alert(response);
+                error: function () {
+                    alert(error_);
                 }
             });
         });

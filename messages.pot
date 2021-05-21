@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-20 02:20-0300\n"
+"POT-Creation-Date: 2021-05-21 13:09-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,7 +117,7 @@ msgstr ""
 msgid "REPORTAR ERRO"
 msgstr ""
 
-#: templates/error.html:22 templates/item.html:232
+#: templates/error.html:22 templates/item.html:235
 msgid "VOLTAR À PÁGINA INICIAL"
 msgstr ""
 
@@ -200,132 +200,136 @@ msgstr ""
 msgid "Miscelânea"
 msgstr ""
 
-#: templates/item.html:37
+#: templates/item.html:39
 msgid "Veja as imagens desse objeto no Wikimedia Commons"
 msgstr ""
 
-#: templates/item.html:50
+#: templates/item.html:53
 msgid "Veja essa imagem no Wikimedia Commons"
 msgstr ""
 
-#: templates/item.html:58
+#: templates/item.html:61
 msgid ""
 "Faça a sua autenticação clicando no botão 'Autenticar-se' no canto "
 "superior direito"
 msgstr ""
 
-#: templates/item.html:64
+#: templates/item.html:67
 msgid "Objeto"
 msgstr ""
 
-#: templates/item.html:71
+#: templates/item.html:74
 msgid "Instância de"
 msgstr ""
 
-#: templates/item.html:84
+#: templates/item.html:87
 msgid "Coleção"
 msgstr ""
 
-#: templates/item.html:97
+#: templates/item.html:100
 msgid "Número de inventário"
 msgstr ""
 
-#: templates/item.html:107
+#: templates/item.html:110
 msgid "Data"
 msgstr ""
 
-#: templates/item.html:115
+#: templates/item.html:118
 msgid "Criador(a)"
 msgstr ""
 
-#: templates/item.html:128
+#: templates/item.html:131
 msgid "Material"
 msgstr ""
 
-#: templates/item.html:141
+#: templates/item.html:144
 msgid "Dimensões"
 msgstr ""
 
-#: templates/item.html:152
+#: templates/item.html:155
 msgid "Método de fabricação"
 msgstr ""
 
-#: templates/item.html:165
+#: templates/item.html:168
 msgid "Versão audível"
 msgstr ""
 
-#: templates/item.html:170
+#: templates/item.html:173
 msgid "Seu navegador não suporta este elemento de áudio"
 msgstr ""
 
-#: templates/item.html:179
+#: templates/item.html:182
 msgid "Pesquise e insira, se existir, o motivo retratado no objeto."
 msgstr ""
 
-#: templates/item.html:188
+#: templates/item.html:191
 msgid "Motivos"
 msgstr ""
 
-#: templates/item.html:193
+#: templates/item.html:196
 msgid "Adicionar motivo"
 msgstr ""
 
-#: templates/item.html:196
+#: templates/item.html:199
 msgid "Adicionar"
 msgstr ""
 
-#: templates/item.html:241
+#: templates/item.html:244
 msgid "PULAR ESTE ITEM"
 msgstr ""
 
-#: templates/item.html:256 templates/item.html:262 templates/item.html:398
+#: templates/item.html:259 templates/item.html:265 templates/item.html:420
 msgid "Declaração"
 msgstr ""
 
-#: templates/item.html:263
+#: templates/item.html:266
 msgid "Descrição da declaração"
 msgstr ""
 
-#: templates/item.html:267 templates/item.html:326 templates/item.html:369
+#: templates/item.html:270 templates/item.html:336 templates/item.html:379
 msgid "Cancelar"
 msgstr ""
 
-#: templates/item.html:271
+#: templates/item.html:274
 msgid "Ir para declaração"
 msgstr ""
 
-#: templates/item.html:282
+#: templates/item.html:278 templates/item.html:281
+msgid "Editar declaração"
+msgstr ""
+
+#: templates/item.html:292
 msgid "Categoria"
 msgstr ""
 
-#: templates/item.html:288
+#: templates/item.html:298
 msgid ""
 "Escolha qual categoria de <a target=\"_blank\" "
 "href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
 "title='Motivo (artes plásticas)'>motivo</a> deseja declarar:"
 msgstr ""
 
-#: templates/item.html:298
+#: templates/item.html:308
 msgid "Elementos da natureza"
 msgstr ""
 
-#: templates/item.html:304
+#: templates/item.html:314
 msgid "Ornamentos arquitetônicos"
 msgstr ""
 
-#: templates/item.html:310
+#: templates/item.html:320
 msgid "Seres mitológicos"
 msgstr ""
 
-#: templates/item.html:315
+#: templates/item.html:325
 msgid "Transporte"
 msgstr ""
 
-#: templates/item.html:320
+#: templates/item.html:330
 msgid "Outros"
 msgstr ""
 
-#: templates/item.html:341
+#: templates/item.html:351
 msgid ""
 "Se o objeto possui um <a target=\"_blank\" "
 "href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
@@ -333,58 +337,64 @@ msgid ""
 "disponíveis, pesquise-a pelo nome no banco de dados."
 msgstr ""
 
-#: templates/item.html:342
+#: templates/item.html:352
 msgid ""
 "Caso o motivo não esteja cadastrado, selecione a opção <i>\"Informar "
 "motivo faltante\"</i>."
 msgstr ""
 
-#: templates/item.html:343
+#: templates/item.html:353
 msgid "Nos casos em que o objeto não possua um motivo, selecione a opção"
 msgstr ""
 
-#: templates/item.html:344 templates/item.html:364 templates/item.html:410
-#: templates/item.html:463 templates/item.html:494
+#: templates/item.html:354 templates/item.html:374 templates/item.html:432
+#: templates/item.html:489 templates/item.html:520
 msgid "Objeto não apresenta motivos"
 msgstr ""
 
-#: templates/item.html:347
+#: templates/item.html:357
 msgid "Pesquise"
 msgstr ""
 
-#: templates/item.html:355
+#: templates/item.html:365
 msgid "Selecione uma opção:"
 msgstr ""
 
-#: templates/item.html:360 templates/item.html:409 templates/item.html:462
-#: templates/item.html:493
+#: templates/item.html:370 templates/item.html:431 templates/item.html:488
+#: templates/item.html:519
 msgid "Informar motivo faltante"
 msgstr ""
 
-#: templates/item.html:371
+#: templates/item.html:381
 msgid "Adicionar declaração"
 msgstr ""
 
-#: templates/item.html:428
+#: templates/item.html:450
 msgid "Declaração inserida com sucesso!"
 msgstr ""
 
-#: templates/item.html:429
+#: templates/item.html:451
+msgid ""
+"Sua declaração foi inserida com sucesso no nosso banco de dados para "
+"análise!"
+msgstr ""
+
+#: templates/item.html:452
 msgid ""
 "Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
 "persista, por favor, reporte em "
 "https://github.com/WikiMovimentoBrasil/wikimotivos/issues"
 msgstr ""
 
-#: templates/item.html:464
+#: templates/item.html:490
 msgid "Pesquisando o banco de dados..."
 msgstr ""
 
-#: templates/item.html:495
+#: templates/item.html:521
 msgid "Nenhum resultado obtido"
 msgstr ""
 
-#: templates/item.html:515
+#: templates/item.html:545
 msgid "Selecione um elemento"
 msgstr ""
 

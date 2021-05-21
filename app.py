@@ -3,7 +3,7 @@ import os
 import json
 import requests
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify, g
-from flask_babel import Babel, gettext
+from flask_babel import Babel, lazy_gettext
 from wikidata import query_by_type, query_metadata_of_work, query_motifs_metadata, post_search_entity, \
     api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid, filter_by_category
 from oauth_wikidata import get_username, get_token
@@ -273,7 +273,8 @@ def add_statement():
 
                 api_post_request(params)
 
-                return jsonify(gettext(u'Declaração inserida com sucesso!'))
+                message = lazy_gettext(u'Declaração inserida com sucesso!')
+                return jsonify(message)
         if pid == 'P180':
             snaktype = 'value'
             token = get_token()
@@ -304,7 +305,8 @@ def add_statement():
             }
             api_post_request(new_params)
 
-            return jsonify(gettext(u'Declaração inserida com sucesso!'))
+            message = lazy_gettext(u'Declaração inserida com sucesso!')
+            return jsonify(message)
         elif pid == 'unknownvalue':
             with open(os.path.join(app.static_folder, 'unknownmotifs.json'), encoding="utf-8") as file:
                 values = json.load(file)
@@ -314,7 +316,9 @@ def add_statement():
                     values[qid] = [{"user": username, "data": today}]
             with open(os.path.join(app.static_folder, 'unknownmotifs.json'), 'w', encoding="utf-8") as file:
                 json.dump(values, file, ensure_ascii=False)
-            return jsonify(gettext(u'Sua declaração foi inserida com sucesso no nosso banco de dados para análise!'))
+
+            message = lazy_gettext(u'Sua declaração foi inserida com sucesso no nosso banco de dados para análise!')
+            return jsonify(message)
         elif pid == 'novalue':
             with open(os.path.join(app.static_folder, 'nomotifs.json'), encoding="utf-8") as file:
                 values = json.load(file)
@@ -324,11 +328,15 @@ def add_statement():
                     values[qid] = [{"user": username, "data": today}]
             with open(os.path.join(app.static_folder, 'nomotifs.json'), 'w', encoding="utf-8") as file:
                 json.dump(values, file, ensure_ascii=False)
-            return jsonify(gettext(u'Sua declaração foi inserida com sucesso no nosso banco de dados!'))
+
+            message = lazy_gettext(u'Sua declaração foi inserida com sucesso no nosso banco de dados para análise!')
+            return jsonify(message)
         else:
-            return jsonify(gettext(u"'Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues'"))
+            message = lazy_gettext(u"'Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues'")
+            return jsonify(message)
     else:
-        return jsonify(gettext(u"'Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues'"))
+        message = lazy_gettext(u"'Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimotivos/issues'")
+        return jsonify(message)
 
 
 def get_claim(qid, pid, val):
