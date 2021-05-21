@@ -34,11 +34,11 @@
       "pt-br": "Mobiliário"
     }
   },
-  "ornamentos": {
+  "decoracao": {
     "query": "SELECT DISTINCT ?item_qid ?item_label ?date_modified (SAMPLE(?imagem) AS ?imagem) ?category WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?item rdfs:label ?item_label} VALUES ?instancia {wd:Q335261} ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem_; wdt:P31 ?instancia; schema:dateModified ?date_modified. BIND(SUBSTR(STR(?item), 32 ) AS ?item_qid) BIND(REPLACE(wikibase:decodeUri(STR(?imagem_)), 'http://commons.wikimedia.org/wiki/Special:FilePath/', '') AS ?imagem) OPTIONAL{?category_ schema:about ?item; schema:name ?category; schema:isPartOf <https://commons.wikimedia.org/>.} } GROUP BY ?item_qid ?item_label ?date_modified ?category ORDER BY (?date_modified)",
     "descriptor": {
-      "en": "Ornaments",
-      "pt-br": "Ornamentos"
+      "en": "Decoration",
+      "pt-br": "Decoração"
     }
   },
   "vasos": {

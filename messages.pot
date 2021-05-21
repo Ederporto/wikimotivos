@@ -206,7 +206,7 @@ msgid "Mobiliário"
 msgstr ""
 
 #: templates/inicio.html:81
-msgid "Ornamentos"
+msgid "Decoração"
 msgstr ""
 
 #: templates/inicio.html:90

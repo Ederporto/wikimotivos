@@ -253,8 +253,8 @@ msgid "Mobiliário"
 msgstr "Furniture"
 
 #: templates/inicio.html:81
-msgid "Ornamentos"
-msgstr "Ornaments"
+msgid "Decoração"
+msgstr "Decoration"
 
 #: templates/inicio.html:90
 msgid "Vasos"
