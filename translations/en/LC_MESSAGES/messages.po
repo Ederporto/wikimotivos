@@ -142,12 +142,12 @@ msgid "Página inicial"
 msgstr "Homepage"
 
 #: templates/base.html:20
-msgid "Wiki Museu do Ipiranga - O que retrata?"
-msgstr "Wiki Museu do Ipiranga - Which brand?"
+msgid "Wiki Museu do Ipiranga - Qual o ornamento?"
+msgstr "Wiki Museu do Ipiranga - What is the ornament?"
 
 #: templates/base.html:39 templates/base.html:41
-msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
-msgstr "Logo of Wiki Museu do Ipiranga - What is depicted?"
+msgid "Logotipo Wiki Museu do Ipiranga - Qual o ornamento?"
+msgstr "Logo of Wiki Museu do Ipiranga - What is the ornament?"
 
 #: templates/base.html:50
 msgid "Projeto Novo Museu do Ipiranga"
@@ -156,14 +156,14 @@ msgstr "Novo Museu do Ipiranga Project"
 #: templates/base.html:51
 #, python-format
 msgid ""
-"<i>Wiki Museu do Ipiranga - O que retrata?</i> é um aplicativo "
+"<i>Wiki Museu do Ipiranga - Qual o ornamento?</i> é um aplicativo "
 "desenvolvido no contexto do <i><b>%(projeto)s</b></i>, organizado pelo "
 "<b>Grupo de Usuários Wiki Movimento Brasil</b> e o <b>Museu do "
 "Ipiranga</b>, em parceria com a <b>Fundação Banco do Brasil</b> e com "
 "realização da <b>Universidade de São Paulo</b> e da <b>Fundação de Apoio "
 "à Universidade de São Paulo</b>."
 msgstr ""
-"<i>Wiki Museu do Ipiranga - What is depicted?</i> is an application "
+"<i>Wiki Museu do Ipiranga - What is the ornament?</i> is an application "
 "developed in the context of <i><b>%(projeto)s</b></i>, organized by the "
 "<b>User Group Wiki Movimento Brasil</b> and the <b> Museu do "
 "Ipiranga</b>, in partnership with the <b>Banco do Brasil Foundation</b> "
@@ -203,8 +203,8 @@ msgid "Logotipo Wiki Museu do Ipiranga"
 msgstr "Logo of Wiki Museu do Ipiranga"
 
 #: templates/inicio.html:26
-msgid "Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - O que retrata?</i>"
-msgstr "Welcome to the <i>Wiki Museu do Ipiranga - What is depicted?</i>"
+msgid "Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - Qual o ornamento?</i>"
+msgstr "Welcome to the <i>Wiki Museu do Ipiranga - What is the ornament?</i>"
 
 #: templates/inicio.html:29
 msgid ""
@@ -505,12 +505,12 @@ msgstr "About"
 #: templates/sobre.html:16
 msgid ""
 "Você está pronto para ser um(a) investigador(a) de acervos? É o que o "
-"aplicativo <b>Wiki Museu do Ipiranga - O que retrata?</b> te oferece: "
+"aplicativo <b>Wiki Museu do Ipiranga - Qual o ornamento?</b> te oferece: "
 "desenvolver suas aptidões de investigação e conhecer mais a fundo o "
 "acervo do Museu do Ipiranga."
 msgstr ""
 "Are you ready to be a collection researcher? This is what the <b>Wiki "
-"Museu do Ipiranga - What is depicted?</b> app offers you: develop your "
+"Museu do Ipiranga - What is the ornament?</b> app offers you: develop your "
 "research skills and learn more about the Ipiranga Museum collection."
 
 #: templates/sobre.html:17

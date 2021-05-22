@@ -110,11 +110,11 @@ msgid "Página inicial"
 msgstr ""
 
 #: templates/base.html:20
-msgid "Wiki Museu do Ipiranga - O que retrata?"
+msgid "Wiki Museu do Ipiranga - Qual o ornamento?"
 msgstr ""
 
 #: templates/base.html:39 templates/base.html:41
-msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
+msgid "Logotipo Wiki Museu do Ipiranga - Qual o ornamento?"
 msgstr ""
 
 #: templates/base.html:50
@@ -124,7 +124,7 @@ msgstr ""
 #: templates/base.html:51
 #, python-format
 msgid ""
-"<i>Wiki Museu do Ipiranga - O que retrata?</i> é um aplicativo "
+"<i>Wiki Museu do Ipiranga - Qual o ornamento?</i> é um aplicativo "
 "desenvolvido no contexto do <i><b>%(projeto)s</b></i>, organizado pelo "
 "<b>Grupo de Usuários Wiki Movimento Brasil</b> e o <b>Museu do "
 "Ipiranga</b>, em parceria com a <b>Fundação Banco do Brasil</b> e com "
@@ -163,7 +163,7 @@ msgid "Logotipo Wiki Museu do Ipiranga"
 msgstr ""
 
 #: templates/inicio.html:26
-msgid "Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - O que retrata?</i>"
+msgid "Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - Qual o ornamento?</i>"
 msgstr ""
 
 #: templates/inicio.html:29
@@ -442,7 +442,7 @@ msgstr ""
 #: templates/sobre.html:16
 msgid ""
 "Você está pronto para ser um(a) investigador(a) de acervos? É o que o "
-"aplicativo <b>Wiki Museu do Ipiranga - O que retrata?</b> te oferece: "
+"aplicativo <b>Wiki Museu do Ipiranga - Qual o ornamento?</b> te oferece: "
 "desenvolver suas aptidões de investigação e conhecer mais a fundo o "
 "acervo do Museu do Ipiranga."
 msgstr ""
