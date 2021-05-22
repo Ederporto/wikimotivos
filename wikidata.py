@@ -3,6 +3,7 @@ import roman
 import re
 import random
 import math
+import urllib.parse as ur
 from flask import current_app, session
 from requests_oauthlib import OAuth1Session
 
@@ -28,7 +29,7 @@ def query_by_type(query, lang="pt-br"):
         images.append({
             "qid": image["item_qid"]["value"],
             "label": image["item_label"]["value"],
-            "imagem": image["imagem"]["value"],
+            "imagem": ur.quote(image["imagem"]["value"]),
             "category": image["category"]["value"] if 'category' in image else '',
         })
 
@@ -102,7 +103,7 @@ def api_category_members(category):
     category_images = []
     if "query" in data and "pages" in data["query"]:
         for page in data["query"]["pages"]:
-            category_images.append(data["query"]["pages"][page]["title"][5:])
+            category_images.append(ur.quote(data["query"]["pages"][page]["title"][5:]))
 
     return category_images
 
