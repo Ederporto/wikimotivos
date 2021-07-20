@@ -274,10 +274,9 @@ msgid ""
 "href=\"https://pt.wikipedia.org/wiki/Ornamento_(arte)\">ornamentos</a> "
 "retratados nos objetos do acervo do Museu do Ipiranga"
 msgstr ""
-"Identify the <a target=\"_blank\" "
-"href=\"https://en.wikipedia.org/wiki/Heraldry\">heraldic elements</a> "
-"that compose the coats of arms represented in works and objects of the "
-"Ipiranga Museum collection."
+"Identify the <a target=\"_blank\" title=\"ornament (art)\" "
+"href=\"https://en.wikipedia.org/wiki/Ornament_(art)\">ornaments</a> "
+"depicted in objects of the Ipiranga Museum collection"
 
 #: templates/inicio.html:29
 msgid ""
