@@ -579,9 +579,8 @@ msgstr ""
 "museum. Here, researchers -- and now you! -- look at the objects in the "
 "collection to identify their origin, what they portray, the history of "
 "the piece. In the application <b>Wiki Museu do Ipiranga - What is "
-"depicted?</b>, you participate in this curatorial work, describing the "
-"clothes and accessories of the people portrayed in objects at the Museu "
-"do Ipiranga."
+"the ornament?</b>, you participate in this curatorial work, identifying the "
+"ornaments represented in objects of the Ipiranga Museum collection."
 
 #: templates/sobre.html:18
 msgid ""
