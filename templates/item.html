@@ -288,13 +288,12 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title">{{ _("Categoria") }}</h3>
                         <button type="button" class="close" data-dismiss="modal" style="font-size:125%; ">&times;
                         </button>
                     </div>
                     <div class="modal-body">
                         <p style="font-size: 115%">
-                            {{ _("Escolha qual categoria de <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento (arte)'>ornamento</a> deseja declarar:") }}
+                            {{ _("Escolha o tipo de <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento (arte)'>ornamento</a> que quer adicionar:") }}
                         </p>
                         <div class="w3-row">
                             <div class="w3-container w3-quarter"></div>
@@ -320,8 +319,8 @@
                                 <button type="submit" id="selectcategory" class="btn btn-primary selectcategory"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
-                                        data-cat="Transporte" data-target="#addModal" data-dismiss="modal"
-                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Transporte") }}</button>
+                                        data-cat="Meios de transporte" data-target="#addModal" data-dismiss="modal"
+                                        style="width:100%; font-size:125%; background-color: #ffbb00;color: black">{{ _("Meios de transporte") }}</button>
                                 <button type="submit" id="selectcategory" class="btn btn-primary selectcategory"
                                         data-toggle="modal"
                                         data-qid="{{ qid }}"
@@ -347,7 +346,7 @@
                     </div>
                     <div class="modal-body">
                         <p style="font-size: 115%">
-                            {{ _("Se o objeto possui um <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento (arte)'>ornamento</a> identificável nas imagens disponíveis, pesquise-a pelo nome no banco de dados.") }}
+                            {{ _("Se o objeto possui um <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento (arte)'>ornamento</a> identificável nas imagens disponíveis, pesquise-a pelo nome.") }}
                             {{ _("Caso o ornamento não esteja cadastrado, selecione a opção <i>\"Informar ornamento faltante\"</i>.") }}
                             {{ _("Nos casos em que o objeto não possua um ornamento, selecione a opção") }}
                             <i>"{{ _("Objeto não apresenta ornamentos") }}"</i>
@@ -416,7 +415,7 @@
             var stat_qid = $(event.relatedTarget).attr('data-stat-id');
             var qid_ = $(event.relatedTarget).attr('data-qid');
             var cat = $(event.relatedTarget).attr('data-cat');
-            var title = "{{ _('Declaração') }} - " + cat;
+            var title = "{{ _('Descrição') }} - " + cat;
 
             $(this).find("#secondModal #addstatement").attr('data-stat-id', stat_qid);
             $(this).find("#secondModal #addstatement").attr('data-qid', qid_);

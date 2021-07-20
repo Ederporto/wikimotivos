@@ -5,7 +5,7 @@ import requests
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify, g
 from flask_babel import Babel, lazy_gettext
 from wikidata import query_by_type, query_metadata_of_work, query_motifs_metadata, post_search_entity, \
-    api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid, filter_by_category
+    api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid, get_labels
 from oauth_wikidata import get_username, get_token
 from requests_oauthlib import OAuth1Session
 from datetime import datetime
@@ -371,7 +371,7 @@ def search_entity():
 
         data = post_search_entity(term, lang)
 
-        new_data = filter_by_category(data, cat)
+        new_data = get_labels(data, cat)
         items = []
         for item_ in new_data:
             item_["labelptbr"] = item_["labelpt"] if not item_["labelptbr"] else item_["labelptbr"]

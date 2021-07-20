@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-21 16:03-0300\n"
+"POT-Creation-Date: 2021-07-20 16:58-0300\n"
 "PO-Revision-Date: 2021-05-09 22:31-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: templates/apps.html:9 templates/topnavbar.html:5
 msgid "Outros aplicativos"
@@ -49,18 +49,20 @@ msgstr ""
 #: templates/apps.html:44
 msgid ""
 "Por exemplo, quantos cordeiros estão retratados no quadro <a "
-"target=\"_blank\" href=\"https://www.wikidata.org/Q52303216\"><i>Mulher "
-"na Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, de"
-" <a target=\"_blank\" "
-"href=\"https://pt.wikipedia.org/Adrien_Henri_Vital_van_Emelen\">Adrien "
-"Henri Vital van Emelen</a>?"
+"target=\"_blank\" "
+"href=\"https://wikiquantos.toolforge.org/qid/Q52303216/pt\"><i>Mulher na "
+"Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, de <a"
+" target=\"_blank\" "
+"href=\"https://wikiquantos.toolforge.org/criador/Q5474348\">Adrien Henri "
+"Vital van Emelen</a>?"
 msgstr ""
 "For example, how many lambs are depicted in the painting <a "
-"target=\"_blank\" href=\"https://www.wikidata.org/Q52303216\"><i>Mulher "
-"na Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, by"
-" <a target=\"_blank\" "
-"href=\"https://en.wikipedia.org/Adrien_Henri_Vital_van_Emelen\">Adrien "
-"Henri Vital van Emelen</a>?"
+"target=\"_blank\" "
+"href=\"https://wikiquantos.toolforge.org/qid/Q52303216/pt\"><i>Mulher na "
+"Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, by <a"
+" target=\"_blank\" "
+"href=\"hhttps://wikiquantos.toolforge.org/criador/Q5474348\">Adrien Henri"
+" Vital van Emelen</a>?"
 
 #: templates/apps.html:55 templates/apps.html:59
 msgid "Logotipo Wiki Museu do Ipiranga - Com que roupa eu vou?"
@@ -80,15 +82,13 @@ msgstr ""
 msgid ""
 "Por exemplo, quais acessórios são usados por Dona Jessy de Souza Queiroz "
 "em seu <a target=\"_blank\" "
-"href=\"https://www.wikidata.org/Q52302832\"><i>retrato</i></a> por <a "
-"target=\"_blank\" href=\"https://pt.wikipedia.org/Karl_Ernst_Papf\">Karl "
-"Ernst Papf</a>?"
+"href=\"https://wikiroupas.toolforge.org/item/Q52302832\"><i>retrato por "
+"Karl Ernst Papf</i></a>?"
 msgstr ""
 "For example, what accessories are used by Dona Jessy de Souza Queiroz in "
 "her <a target=\"_blank\" "
-"href=\"https://www.wikidata.org/Q52302832\"><i>portrait</i></a> by <a "
-"target=\"_blank\" href=\"https://en.wikipedia.org/Karl_Ernst_Papf\">Karl "
-"Ernst Papf</a>?"
+"href=\"https://wikiroupas.toolforge.org/item/Q52302832\"><i>portrait by "
+"Karl Ernst Papf</i></a>?"
 
 #: templates/apps.html:79 templates/apps.html:83
 msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
@@ -104,13 +104,20 @@ msgstr ""
 
 #: templates/apps.html:92
 msgid ""
-"Por exemplo, qual a marca do brinquedo <a target=\"_blank\" "
-"href=\"https://www.wikidata.org/Q65033132\"><i>Trem de luxo Nº2</i></a>?"
+"Por exemplo, qual a marca do <a target=\"_blank\" "
+"href=\"https://wikimarcas.toolforge.org/colecao/brinquedos\"><i>brinquedo</i></a>"
+" <a target=\"_blank\" "
+"href=\"https://wikimarcas.toolforge.org/item/Q65033132\"><i>Trem de luxo "
+"Nº2</i></a>?"
 msgstr ""
-"For example, which is the brand of the toy <a target=\"_blank\" "
-"href=\"https://www.wikidata.org/Q65033132\"><i>Trem de luxo Nº2</i></a>?"
+"For example, which is the brand of the <a target=\"_blank\" "
+"href=\"https://wikimarcas.toolforge.org/colecao/brinquedos\"><i>toy</a> "
+"<a target=\"_blank\" "
+"href=\"https://wikimarcas.toolforge.org/item/Q65033132\"><i>Trem de luxo "
+"Nº2</i></a>?"
 
-#: templates/apps.html:103 templates/apps.html:107
+#: templates/apps.html:103 templates/apps.html:107 templates/base.html:39
+#: templates/base.html:41
 msgid "Logotipo Wiki Museu do Ipiranga - Qual o ornamento?"
 msgstr "Logo of Wiki Museu do Ipiranga - What is the ornament?"
 
@@ -125,16 +132,67 @@ msgstr ""
 #: templates/apps.html:116
 msgid ""
 "Por exemplo, qual tipo de flor está representada numa <a "
-"target=\"_blank\" href=\"https://www.wikidata.org/Q106210419\"><i>sopeira"
-" com tampa</i></a> produzida pelas <a target=\"_blank\" "
-"href=\"https://pt.wikipedia.org/Indústrias_Reunidas_Fábricas_Matarazzo\">Indústrias"
-" Reunidas Fábricas Matarazzo</a>?"
+"target=\"_blank\" "
+"href=\"https://wikimotivos.toolforge.org/item/Q106210419\"><i>sopeira com"
+" tampa</i> produzida pelas Indústrias Reunidas Fábricas Matarazzo</a>?"
 msgstr ""
 "For example, what type of flower is represented in a <a target=\"_blank\""
-" href=\"https://www.wikidata.org/Q106210419\"><i>tureen with lid</i></a> "
-"produced by <a target=\"_blank\" "
-"href=\"https://pt.wikipedia.org/Indústrias_Reunidas_Fábricas_Matarazzo\">Indústrias"
-" Reunidas Fábricas Matarazzo</a>?"
+" href=\"https://wikimotivos.toolforge.org/item/Q106210419\"><i>tureen "
+"with lid</i> produced by the Indústrias Reunidas Fábricas Matarazzo</a>?"
+
+#: templates/apps.html:127 templates/apps.html:131
+msgid "Logotipo Wiki Museu do Ipiranga - Para que serve?"
+msgstr "Logo of Wiki Museu do Ipiranga - What is it for?"
+
+#: templates/apps.html:139
+msgid ""
+"<b>Para que serve?</b> te convida a fotografar e descrever o uso de "
+"objetos semelhantes aos encontrados no acervo do Museu do Ipiranga que "
+"você possua em casa."
+msgstr ""
+"<b>What is it for?</b> invites you to photograph and describe the use of "
+"objects similar to those found in the collection of the Ipiranga Museum "
+"that you have at home."
+
+#: templates/apps.html:140
+msgid ""
+"Por exemplo, você tem um <a target=\"_blank\" "
+"href=\"https://wikiusos.toolforge.org/item/Q65033097\"><i>ralador de "
+"queijo</i> como este</a> na cozinha da sua casa? Você o utiliza somente "
+"para ralar queijo? Ou o usa como peça decorativa? Ele tem alguma história"
+" especial?"
+msgstr ""
+"For example, do you have a <a target=\"_blank\" "
+"href=\"https://wikiusos.toolforge.org/item/Q65033097\"><i>cheese "
+"grater</i> like this</a> in your kitchen at home. Do you only use it for "
+"grating cheese? Or do you use it as a decorative piece? Does it have a "
+"special story?"
+
+#: templates/apps.html:151 templates/apps.html:155
+msgid "Logotipo Wiki Museu do Ipiranga - O que há no brasão?"
+msgstr "Logo of Wiki Museu do Ipiranga - What is in the coat of arms?"
+
+#: templates/apps.html:163
+msgid ""
+"<b>O que há no brasão?</b> te convida a identificar os elementos "
+"heráldicos dos brasões retratados em obras e objetos do acervo do Museu "
+"do Ipiranga."
+msgstr ""
+"<b>What is in the coat of arms?</b> invites you to identify the heraldic "
+"elements of the coats of arms depicted in works and objects in the "
+"Ipiranga Museum collection."
+
+#: templates/apps.html:164
+msgid ""
+"Por exemplo, você consegue identificar todos os elementos presentes <a "
+"target=\"_blank\" "
+"href=\"https://wikibrasoes.toolforge.org/item/Q55851804\"><i>nesta "
+"pintura de brasão de José Wasth Rodrigues</i></a>?"
+msgstr ""
+"For example, can you identify all the elements present <a "
+"target=\"_blank\" "
+"href=\"https://wikibrasoes.toolforge.org/item/Q55851804\"><i>in this coat"
+" of arms painting by José Wasth Rodrigues</i></a>?"
 
 #: templates/base.html:20 templates/colecao.html:21 templates/inicio.html:9
 #: templates/topnavbar.html:2
@@ -144,10 +202,6 @@ msgstr "Homepage"
 #: templates/base.html:20
 msgid "Wiki Museu do Ipiranga - Qual o ornamento?"
 msgstr "Wiki Museu do Ipiranga - What is the ornament?"
-
-#: templates/base.html:39 templates/base.html:41
-msgid "Logotipo Wiki Museu do Ipiranga - Qual o ornamento?"
-msgstr "Logo of Wiki Museu do Ipiranga - What is the ornament?"
 
 #: templates/base.html:50
 msgid "Projeto Novo Museu do Ipiranga"
@@ -186,15 +240,15 @@ msgstr ""
 "There are %(quant)s objects selected. To browse other selections of "
 "objects, return to the %(home)s."
 
-#: templates/error.html:3 templates/error.html:8
+#: templates/error.html:9 templates/error.html:14
 msgid "Algo deu errado!"
 msgstr "Something went wrong!"
 
-#: templates/error.html:15
+#: templates/error.html:21
 msgid "REPORTAR ERRO"
 msgstr "REPORT ERROR"
 
-#: templates/error.html:22 templates/item.html:235
+#: templates/error.html:28 templates/item.html:234
 msgid "VOLTAR À PÁGINA INICIAL"
 msgstr "GO TO HOMEPAGE"
 
@@ -216,13 +270,14 @@ msgstr ""
 
 #: templates/inicio.html:29
 msgid ""
-"Identificar os <a target=\"_blank\" title=\"ornamento (arte)\" "
-"href=\"https://pt.wikipedia.org/wiki/Ornamento_(arte)\">ornamentos</a>"
-" retratados nos objetos do acervo do Museu do Ipiranga"
+"Identificar os <a target=\"_blank\" title=\"ornamento\" "
+"href=\"https://pt.wikipedia.org/wiki/Ornamento_(arte)\">ornamentos</a> "
+"retratados nos objetos do acervo do Museu do Ipiranga"
 msgstr ""
-"Identify the <a target=\"_blank\" title=\"ornament (art)\" "
-"href=\"https://en.wikipedia.org/wiki/Ornament_(art)\">ornaments</a> "
-"depicted in objects of the Ipiranga Museum collection"
+"Identify the <a target=\"_blank\" "
+"href=\"https://en.wikipedia.org/wiki/Heraldry\">heraldic elements</a> "
+"that compose the coats of arms represented in works and objects of the "
+"Ipiranga Museum collection."
 
 #: templates/inicio.html:29
 msgid ""
@@ -245,8 +300,8 @@ msgid "Brinquedos"
 msgstr "Toys"
 
 #: templates/inicio.html:65
-msgid "Cozinha"
-msgstr "Kitchen"
+msgid "Alimentação"
+msgstr "Food"
 
 #: templates/inicio.html:74
 msgid "Mobiliário"
@@ -308,129 +363,124 @@ msgstr "Object"
 msgid "Instância de"
 msgstr "Instance of"
 
-#: templates/item.html:87
+#: templates/item.html:86
 msgid "Coleção"
 msgstr "Collection"
 
-#: templates/item.html:100
+#: templates/item.html:98
 msgid "Número de inventário"
 msgstr "Inventory number"
 
-#: templates/item.html:110
+#: templates/item.html:108
 msgid "Data"
 msgstr "Date"
 
-#: templates/item.html:118
+#: templates/item.html:116
 msgid "Criador(a)"
 msgstr "Creator"
 
-#: templates/item.html:131
+#: templates/item.html:128
 msgid "Material"
 msgstr "Material"
 
-#: templates/item.html:144
+#: templates/item.html:140
 msgid "Dimensões"
 msgstr "Dimensions"
 
-#: templates/item.html:155
+#: templates/item.html:151
 msgid "Método de fabricação"
 msgstr "Fabrication method"
 
-#: templates/item.html:168
+#: templates/item.html:163
 msgid "Versão audível"
 msgstr "Audible version"
 
-#: templates/item.html:173
+#: templates/item.html:168
 msgid "Seu navegador não suporta este elemento de áudio"
 msgstr "Your browser does not support this audio element"
 
-#: templates/item.html:182
+#: templates/item.html:177
 msgid "Pesquise e insira, se existir, o ornamento retratado no objeto."
 msgstr "Search for and enter the object's ornament."
 
-#: templates/item.html:191
+#: templates/item.html:186
 msgid "Ornamentos"
 msgstr "Ornaments"
 
-#: templates/item.html:196
+#: templates/item.html:192
 msgid "Adicionar ornamento"
 msgstr "Add ornament"
 
-#: templates/item.html:199
-msgid "Adicionar"
-msgstr "Add"
+#: templates/item.html:196
+msgid "ADICIONAR"
+msgstr "ADD"
 
-#: templates/item.html:244
+#: templates/item.html:243
 msgid "PULAR ESTE ITEM"
 msgstr "SKIP THIS ITEM"
 
-#: templates/item.html:259 templates/item.html:265 templates/item.html:420
+#: templates/item.html:258 templates/item.html:264
 msgid "Declaração"
 msgstr "Statement"
 
-#: templates/item.html:266
+#: templates/item.html:265
 msgid "Descrição da declaração"
 msgstr "Statement description"
 
-#: templates/item.html:270 templates/item.html:336 templates/item.html:379
+#: templates/item.html:269 templates/item.html:334 templates/item.html:377
 msgid "Cancelar"
 msgstr "Cancel"
 
-#: templates/item.html:274
+#: templates/item.html:273
 msgid "Ir para declaração"
 msgstr "Go to statement"
 
-#: templates/item.html:278 templates/item.html:281
+#: templates/item.html:277 templates/item.html:280
 msgid "Editar declaração"
 msgstr "Edit statement"
 
-#: templates/item.html:292
-msgid "Categoria"
-msgstr "Category"
-
-#: templates/item.html:298
+#: templates/item.html:296
 msgid ""
-"Escolha qual categoria de <a target=\"_blank\" "
-"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' "
-"title='Ornamento (arte)'>ornamento</a> deseja declarar:"
+"Escolha o tipo de <a target=\"_blank\" "
+"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento "
+"(arte)'>ornamento</a> que quer adicionar:"
 msgstr ""
-"Choose which category of <a target=\"_blank\" "
+"Choose which type of <a target=\"_blank\" "
 "href='https://en.wikipedia.org/wiki/Ornament_(art)' title='Ornament "
-"(art)'>ornament</a> you want to declare:"
+"(art)'>ornament</a> you want to add:"
 
-#: templates/item.html:308
+#: templates/item.html:306
 msgid "Elementos da natureza"
 msgstr "Elements of nature"
 
-#: templates/item.html:314
+#: templates/item.html:312
 msgid "Ornamentos arquitetônicos"
 msgstr "Architectural ornaments"
 
-#: templates/item.html:320
+#: templates/item.html:318
 msgid "Seres mitológicos"
 msgstr "Mythological beings"
 
-#: templates/item.html:325
-msgid "Transporte"
-msgstr "Transportation"
+#: templates/item.html:323
+msgid "Meios de transporte"
+msgstr "Means of transport"
 
-#: templates/item.html:330
+#: templates/item.html:328
 msgid "Outros"
 msgstr "Others"
 
-#: templates/item.html:351
+#: templates/item.html:349
 msgid ""
 "Se o objeto possui um <a target=\"_blank\" "
-"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' "
-"title='Ornamento (arte)'>ornamento</a> identificável nas imagens "
-"disponíveis, pesquise-a pelo nome no banco de dados."
+"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento "
+"(arte)'>ornamento</a> identificável nas imagens disponíveis, pesquise-a "
+"pelo nome."
 msgstr ""
 "If the object has a identifiable <a target=\"_blank\" "
 "href='https://en.wikipedia.org/wiki/Ornament_(art)' title='Ornament "
-"(art)'>ornament</a>  in the images available, search it by the name "
-"in the database."
+"(art)'>ornament</a>  in the images available, search it by the name."
 
-#: templates/item.html:352
+#: templates/item.html:350
 msgid ""
 "Caso o ornamento não esteja cadastrado, selecione a opção <i>\"Informar "
 "ornamento faltante\"</i>."
@@ -438,37 +488,41 @@ msgstr ""
 "If the ornament is not registered, select the option <i>\"Inform missing "
 "ornament\"</i>. "
 
-#: templates/item.html:353
+#: templates/item.html:351
 msgid "Nos casos em que o objeto não possua um ornamento, selecione a opção"
 msgstr "In cases where the object does not have a ornament, select the option"
 
-#: templates/item.html:354 templates/item.html:374 templates/item.html:432
-#: templates/item.html:489 templates/item.html:520
+#: templates/item.html:352 templates/item.html:372 templates/item.html:430
+#: templates/item.html:487 templates/item.html:518
 msgid "Objeto não apresenta ornamentos"
 msgstr "Object has no ornaments"
 
-#: templates/item.html:357
+#: templates/item.html:355
 msgid "Pesquise"
 msgstr "Search"
 
-#: templates/item.html:365
+#: templates/item.html:363
 msgid "Selecione uma opção:"
 msgstr "Select an option:"
 
-#: templates/item.html:370 templates/item.html:431 templates/item.html:488
-#: templates/item.html:519
+#: templates/item.html:368 templates/item.html:429 templates/item.html:486
+#: templates/item.html:517
 msgid "Informar ornamento faltante"
 msgstr "Report missing ornament"
 
-#: templates/item.html:381
+#: templates/item.html:379
 msgid "Adicionar declaração"
 msgstr "Add statement"
 
-#: templates/item.html:450
+#: templates/item.html:418
+msgid "Descrição"
+msgstr "Description"
+
+#: templates/item.html:448
 msgid "Declaração inserida com sucesso!"
 msgstr "Statement successfully registered!"
 
-#: templates/item.html:451
+#: templates/item.html:449
 msgid ""
 "Sua declaração foi inserida com sucesso no nosso banco de dados para "
 "análise!"
@@ -476,7 +530,7 @@ msgstr ""
 "Your statement has been successfully registered into our database for "
 "analysis!"
 
-#: templates/item.html:452
+#: templates/item.html:450
 msgid ""
 "Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
 "persista, por favor, reporte em "
@@ -486,15 +540,15 @@ msgstr ""
 "persists, please, report in "
 "https://github.com/WikiMovimentoBrasil/wikimotivos/issues"
 
-#: templates/item.html:490
+#: templates/item.html:488
 msgid "Pesquisando o banco de dados..."
 msgstr "Searching the database..."
 
-#: templates/item.html:521
+#: templates/item.html:519
 msgid "Nenhum resultado obtido"
 msgstr "No result found"
 
-#: templates/item.html:545
+#: templates/item.html:543
 msgid "Selecione um elemento"
 msgstr "Select an item"
 
@@ -504,14 +558,14 @@ msgstr "About"
 
 #: templates/sobre.html:16
 msgid ""
-"Você está pronto para ser um(a) investigador(a) de acervos? É o que o "
+"Você está pronto(a) para ser um(a) investigador(a) de acervos? É o que o "
 "aplicativo <b>Wiki Museu do Ipiranga - Qual o ornamento?</b> te oferece: "
 "desenvolver suas aptidões de investigação e conhecer mais a fundo o "
 "acervo do Museu do Ipiranga."
 msgstr ""
 "Are you ready to be a collection researcher? This is what the <b>Wiki "
-"Museu do Ipiranga - What is the ornament?</b> app offers you: develop your "
-"research skills and learn more about the Ipiranga Museum collection."
+"Museu do Ipiranga - What is the ornament?</b> app offers you: develop "
+"your research skills and learn more about the Ipiranga Museum collection."
 
 #: templates/sobre.html:17
 msgid ""
@@ -519,8 +573,8 @@ msgid ""
 "Nela, pesquisadoras e pesquisadores -- e agora você! -- se debruçam sobre"
 " os objetos da coleção para identificar sua procedência, o que retrata, a"
 " história da peça. No aplicativo <b>Wiki Museu do Ipiranga - Qual o "
-"ornamento?</b>, você participa desse trabalho de curadoria, identificando "
-"os ornamentos representados em objetos do acervo do Museu do Ipiranga."
+"ornamento?</b>, você participa desse trabalho de curadoria, identificando"
+" os ornamentos representados em objetos do acervo do Museu do Ipiranga."
 msgstr ""
 "Curating the collection is one of the most important activities of the "
 "museum. Here, researchers -- and now you! -- look at the objects in the "
@@ -535,8 +589,7 @@ msgid ""
 "O trabalho é sério! Suas edições são interativas e automaticamente "
 "registradas. Elas aparecem num grande documento, uma base de dados, em "
 "que pouco a pouco as informações sobre o acervo do Museu do Ipiranga são "
-"melhoradas. Você é agora tem o poder de ajudar -- que responsabilidade, "
-"né?"
+"melhoradas. Você agora tem o poder de ajudar -- que responsabilidade, né?"
 msgstr ""
 "The work is serious! Your edits are interactive and automatically "
 "recorded. They appear in a large document, a database, in which the "
@@ -626,4 +679,3 @@ msgstr "Menu"
 #: templates/tutorial.html:9
 msgid "Tutorial"
 msgstr "Tutorial"
-
