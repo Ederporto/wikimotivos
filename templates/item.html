@@ -76,8 +76,7 @@
                             {% for elem in metadata.instancia %}
                                 {% set elem_parts = elem.split('@') %}
                                 <a tabindex="0" target="_blank"
-                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
-                                {{ ";" if not loop.last }}
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>{{ ";" if not loop.last }}
                             {% endfor %}
                         </td>
                     </tr>
@@ -89,8 +88,7 @@
                             {% for elem in metadata.colecao %}
                                 {% set elem_parts = elem.split('@') %}
                                 <a tabindex="0" target="_blank"
-                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
-                                {{ ";" if not loop.last }}
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>{{ ";" if not loop.last }}
                             {% endfor %}
                         </td>
                     </tr>
@@ -120,8 +118,7 @@
                             {% for elem in metadata.criador %}
                                 {% set elem_parts = elem.split('@') %}
                                 <a tabindex="0" target="_blank"
-                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
-                                {{ ";" if not loop.last }}
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>{{ ";" if not loop.last }}
                             {% endfor %}
                         </td>
                     </tr>
@@ -133,8 +130,7 @@
                             {% for elem in metadata.material %}
                                 {% set elem_parts = elem.split('@') %}
                                 <a tabindex="0" target="_blank"
-                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
-                                {{ ";" if not loop.last }}
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>{{ ";" if not loop.last }}
                             {% endfor %}
                         </td>
                     </tr>
@@ -157,8 +153,7 @@
                             {% for elem in metadata.metodo %}
                                 {% set elem_parts = elem.split('@') %}
                                 <a tabindex="0" target="_blank"
-                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>
-                                {{ ";" if not loop.last }}
+                                   href="https://www.wikidata.org/wiki/{{ elem_parts[0] }}">{{ elem_parts[1] }}</a>{{ ";" if not loop.last }}
                             {% endfor %}
                         </td>
                     </tr>
@@ -193,11 +188,15 @@
                         {% endif %}
                         <td>
                             {% if username %}
-                                <a class="button" title="{{ _('Adicionar ornamento') }}">
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                            data-qid="{{ metadata.obra_qid[0] }}" data-target="#selectModal"
-                                            style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button>
-                                </a>
+                                <div class="w3-container" style="padding:0">
+                                    <a tabindex="0" type="{{ _('Adicionar ornamento') }}">
+                                        <button type="button" class="button" data-toggle="modal"
+                                                data-qid="{{ metadata.obra_qid[0] }}" data-target="#selectModal"
+                                                style="background-color:#008000;width:100%;margin:0; color:white; font-size: 125%">
+                                            {{ _("ADICIONAR") }}
+                                        </button>
+                                    </a>
+                                </div>
                             {% endif %}
                             {% if depicts_metadata %}
                                 {% for depicted_entity in depicts_metadata %}
