@@ -91,7 +91,7 @@ msgstr ""
 
 #: templates/apps.html:115
 msgid ""
-"<b>Qual o ornamento?</b> te convida a identificar os motivos "
+"<b>Qual o ornamento?</b> te convida a identificar os ornamentos "
 "representados em objetos do acervo do Museu do Ipiranga."
 msgstr ""
 
@@ -174,8 +174,8 @@ msgstr ""
 
 #: templates/inicio.html:29
 msgid ""
-"Identificar os <a target=\"_blank\" title=\"motivo (artes plásticas)\" "
-"href=\"https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)\">motivos</a>"
+"Identificar os <a target=\"_blank\" title=\"ornamentos\" "
+"href=\"https://pt.wikipedia.org/wiki/Ornamento_(arte)\">ornamentos</a>"
 " retratados nos objetos do acervo do Museu do Ipiranga"
 msgstr ""
 
@@ -296,15 +296,15 @@ msgid "Seu navegador não suporta este elemento de áudio"
 msgstr ""
 
 #: templates/item.html:182
-msgid "Pesquise e insira, se existir, o motivo retratado no objeto."
+msgid "Pesquise e insira, se existir, o ornamento retratado no objeto."
 msgstr ""
 
 #: templates/item.html:191
-msgid "Motivos"
+msgid "Ornamentos"
 msgstr ""
 
 #: templates/item.html:196
-msgid "Adicionar motivo"
+msgid "Adicionar ornamento"
 msgstr ""
 
 #: templates/item.html:199
@@ -342,8 +342,8 @@ msgstr ""
 #: templates/item.html:298
 msgid ""
 "Escolha qual categoria de <a target=\"_blank\" "
-"href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
-"title='Motivo (artes plásticas)'>motivo</a> deseja declarar:"
+"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' "
+"title='Ornamento (arte)'>ornamento</a> deseja declarar:"
 msgstr ""
 
 #: templates/item.html:308
@@ -369,24 +369,24 @@ msgstr ""
 #: templates/item.html:351
 msgid ""
 "Se o objeto possui um <a target=\"_blank\" "
-"href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
-"title='Motivo (artes plásticas)'>motivo</a> identificável nas imagens "
+"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' "
+"title='Ornamento (arte)'>ornamento</a> identificável nas imagens "
 "disponíveis, pesquise-a pelo nome no banco de dados."
 msgstr ""
 
 #: templates/item.html:352
 msgid ""
-"Caso o motivo não esteja cadastrado, selecione a opção <i>\"Informar "
-"motivo faltante\"</i>."
+"Caso o ornamento não esteja cadastrado, selecione a opção <i>\"Informar "
+"ornamento faltante\"</i>."
 msgstr ""
 
 #: templates/item.html:353
-msgid "Nos casos em que o objeto não possua um motivo, selecione a opção"
+msgid "Nos casos em que o objeto não possua um ornamento, selecione a opção"
 msgstr ""
 
 #: templates/item.html:354 templates/item.html:374 templates/item.html:432
 #: templates/item.html:489 templates/item.html:520
-msgid "Objeto não apresenta motivos"
+msgid "Objeto não apresenta ornamentos"
 msgstr ""
 
 #: templates/item.html:357
@@ -399,7 +399,7 @@ msgstr ""
 
 #: templates/item.html:370 templates/item.html:431 templates/item.html:488
 #: templates/item.html:519
-msgid "Informar motivo faltante"
+msgid "Informar ornamento faltante"
 msgstr ""
 
 #: templates/item.html:381
@@ -452,9 +452,9 @@ msgid ""
 "A curadoria de acervo é uma das atividades mais importantes do museu. "
 "Nela, pesquisadoras e pesquisadores -- e agora você! -- se debruçam sobre"
 " os objetos da coleção para identificar sua procedência, o que retrata, a"
-" história da peça. No aplicativo <b>Wiki Museu do Ipiranga - O que "
-"retrata?</b>, você participa desse trabalho de curadoria, identificando "
-"os motivos representados em objetos do acervo do Museu do Ipiranga."
+" história da peça. No aplicativo <b>Wiki Museu do Ipiranga - Qual o "
+"ornamento?</b>, você participa desse trabalho de curadoria, identificando "
+"os ornamentos representados em objetos do acervo do Museu do Ipiranga."
 msgstr ""
 
 #: templates/sobre.html:18

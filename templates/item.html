@@ -179,7 +179,7 @@
             {% if not depicts_metadata %}
                 <div class="w3-container">
                     <h2>
-                        {{ _("Pesquise e insira, se existir, o motivo retratado no objeto.") }}
+                        {{ _("Pesquise e insira, se existir, o ornamento retratado no objeto.") }}
                     </h2>
                 </div>
             {% endif %}
@@ -188,12 +188,12 @@
                     <tr>
                         {% if depicts_metadata %}
                             <th style="width:30%">
-                                {{ _("Motivos") }}
+                                {{ _("Ornamentos") }}
                             </th>
                         {% endif %}
                         <td>
                             {% if username %}
-                                <a class="button" title="{{ _('Adicionar motivo') }}">
+                                <a class="button" title="{{ _('Adicionar ornamento') }}">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
                                             data-qid="{{ metadata.obra_qid[0] }}" data-target="#selectModal"
                                             style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button>
@@ -295,7 +295,7 @@
                     </div>
                     <div class="modal-body">
                         <p style="font-size: 115%">
-                            {{ _("Escolha qual categoria de <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' title='Motivo (artes plásticas)'>motivo</a> deseja declarar:") }}
+                            {{ _("Escolha qual categoria de <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento (arte)'>ornamento</a> deseja declarar:") }}
                         </p>
                         <div class="w3-row">
                             <div class="w3-container w3-quarter"></div>
@@ -348,10 +348,10 @@
                     </div>
                     <div class="modal-body">
                         <p style="font-size: 115%">
-                            {{ _("Se o objeto possui um <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' title='Motivo (artes plásticas)'>motivo</a> identificável nas imagens disponíveis, pesquise-a pelo nome no banco de dados.") }}
-                            {{ _("Caso o motivo não esteja cadastrado, selecione a opção <i>\"Informar motivo faltante\"</i>.") }}
-                            {{ _("Nos casos em que o objeto não possua um motivo, selecione a opção") }}
-                            <i>"{{ _("Objeto não apresenta motivos") }}"</i>
+                            {{ _("Se o objeto possui um <a target=\"_blank\" href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' title='Ornamento (arte)'>ornamento</a> identificável nas imagens disponíveis, pesquise-a pelo nome no banco de dados.") }}
+                            {{ _("Caso o ornamento não esteja cadastrado, selecione a opção <i>\"Informar ornamento faltante\"</i>.") }}
+                            {{ _("Nos casos em que o objeto não possua um ornamento, selecione a opção") }}
+                            <i>"{{ _("Objeto não apresenta ornamentos") }}"</i>
                         </p>
                         <div class="form-inline">
                             <input type="search" class="form-control" placeholder="{{ _('Pesquise') }}"
@@ -367,11 +367,11 @@
                             <input type="radio" id="motivo_desconhecido" name="claim_option" data-tipo="unknownvalue"
                                    value="unknownvalueformotif">
                             <label for="motivo_desconhecido"
-                                   style="font-size: 125%"><i>{{ _("Informar motivo faltante") }}</i></label><br>
+                                   style="font-size: 125%"><i>{{ _("Informar ornamento faltante") }}</i></label><br>
                             <input type="radio" id="motivo_inexistente" name="claim_option" data-tipo="novalue"
                                    value="novalueformotif">
                             <label for="motivo_inexistente"
-                                   style="font-size: 125%"><i>{{ _("Objeto não apresenta motivos") }}</i></label><br>
+                                   style="font-size: 125%"><i>{{ _("Objeto não apresenta ornamentos") }}</i></label><br>
                         </form>
                     </div>
                     <div class="modal-footer" id="secondModal">
@@ -428,8 +428,8 @@
         })
 
         $('#addModal').on('hidden.bs.modal', function () {
-            var unknown_motif = "{{ _('Informar motivo faltante') }}";
-            var no_motif = "{{ _('Objeto não apresenta motivos') }}";
+            var unknown_motif = "{{ _('Informar ornamento faltante') }}";
+            var no_motif = "{{ _('Objeto não apresenta ornamentos') }}";
 
             $(this).find("#secondModal #addstatement").attr('data-stat-id', "");
             $(this).find("#secondModal #addstatement").attr('data-qid', "");
@@ -485,8 +485,8 @@
         });
 
         $("#do_the_search").on('click', function (event) {
-            var unknown_motif = "{{ _('Informar motivo faltante') }}";
-            var no_motif = "{{ _('Objeto não apresenta motivos') }}";
+            var unknown_motif = "{{ _('Informar ornamento faltante') }}";
+            var no_motif = "{{ _('Objeto não apresenta ornamentos') }}";
             var wait = "{{ _('Pesquisando o banco de dados...') }}";
             if ($("#search_field")[0].value) {
                 $("#search_results").empty();
@@ -516,8 +516,8 @@
                 dataType: "json",
 
                 success: function (response) {
-                    var unknown_motif = "{{ _('Informar motivo faltante') }}";
-                    var no_motif = "{{ _('Objeto não apresenta motivos') }}";
+                    var unknown_motif = "{{ _('Informar ornamento faltante') }}";
+                    var no_motif = "{{ _('Objeto não apresenta ornamentos') }}";
                     var no_result = "{{ _('Nenhum resultado obtido') }}";
                     $("#search_results").empty()
 

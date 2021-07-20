@@ -139,7 +139,11 @@ def pt_to_ptbr(lang):
 @app.errorhandler(504)
 @app.errorhandler(505)
 def page_not_found(e):
-    return render_template('error.html')
+    username = get_username()
+    lang = pt_to_ptbr(get_locale())
+    return render_template('error.html',
+                           username=username,
+                           lang=lang)
 
 
 # Página inicial

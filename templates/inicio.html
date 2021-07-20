@@ -26,7 +26,7 @@
                 {{ _("Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - Qual o ornamento?</i>")}}
             </h2>
             <h3 style="text-align:center; padding-bottom:30px;">
-                {{_("Neste aplicativo, você participa do trabalho de pesquisa do Museu do Ipiranga. Sua tarefa: ")}} {{_("Identificar os <a target=\"_blank\" title=\"motivo (artes plásticas)\" href=\"https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)\">motivos</a> retratados nos objetos do acervo do Museu do Ipiranga")}}. {{_("Para participar, é preciso autenticar-se; depois, escolha uma categoria abaixo para começar.")}}
+                {{_("Neste aplicativo, você participa do trabalho de pesquisa do Museu do Ipiranga. Sua tarefa: ")}} {{_("Identificar os <a target=\"_blank\" title=\"ornamento\" href=\"https://pt.wikipedia.org/wiki/Ornamento_(arte)\">ornamentos</a> retratados nos objetos do acervo do Museu do Ipiranga")}}. {{_("Para participar, é preciso autenticar-se; depois, escolha uma categoria abaixo para começar.")}}
             </h3>
         </div>
     </div>
@@ -60,9 +60,9 @@
                 </a>
             </div>
             <div class="w3-container w3-half">
-                <a class="button" href="{{ url_for('colecao', type='cozinha') }}">
+                <a class="button" href="{{ url_for('colecao', type='alimentacao') }}">
                     <button type="button" style="width:100%;">
-                        {{ _('Cozinha') }}
+                        {{ _('Alimentação') }}
                     </button>
                 </a>
             </div>

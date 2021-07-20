@@ -58,7 +58,7 @@ msgstr ""
 "For example, how many lambs are depicted in the painting <a "
 "target=\"_blank\" href=\"https://www.wikidata.org/Q52303216\"><i>Mulher "
 "na Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, by"
-"  <a target=\"_blank\" "
+" <a target=\"_blank\" "
 "href=\"https://en.wikipedia.org/Adrien_Henri_Vital_van_Emelen\">Adrien "
 "Henri Vital van Emelen</a>?"
 
@@ -116,10 +116,10 @@ msgstr "Logo of Wiki Museu do Ipiranga - What is the ornament?"
 
 #: templates/apps.html:115
 msgid ""
-"<b>Qual o ornamento?</b> te convida a identificar os motivos "
+"<b>Qual o ornamento?</b> te convida a identificar os ornamentos "
 "representados em objetos do acervo do Museu do Ipiranga."
 msgstr ""
-"<b>What is the ornament?</b> invites you to identify the motifs "
+"<b>What is the ornament?</b> invites you to identify the ornaments "
 "represented in objects from the Ipiranga Museum collection."
 
 #: templates/apps.html:116
@@ -216,12 +216,12 @@ msgstr ""
 
 #: templates/inicio.html:29
 msgid ""
-"Identificar os <a target=\"_blank\" title=\"motivo (artes plásticas)\" "
-"href=\"https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)\">motivos</a>"
+"Identificar os <a target=\"_blank\" title=\"ornamento (arte)\" "
+"href=\"https://pt.wikipedia.org/wiki/Ornamento_(arte)\">ornamentos</a>"
 " retratados nos objetos do acervo do Museu do Ipiranga"
 msgstr ""
-"Identify the <a target=\"_blank\" title=\"motif (visual arts)\" "
-"href=\"https://en.wikipedia.org/wiki/Motif_(visual_arts)\">motifs</a> "
+"Identify the <a target=\"_blank\" title=\"ornament (art)\" "
+"href=\"https://en.wikipedia.org/wiki/Ornament_(art)\">ornaments</a> "
 "depicted in objects of the Ipiranga Museum collection"
 
 #: templates/inicio.html:29
@@ -345,16 +345,16 @@ msgid "Seu navegador não suporta este elemento de áudio"
 msgstr "Your browser does not support this audio element"
 
 #: templates/item.html:182
-msgid "Pesquise e insira, se existir, o motivo retratado no objeto."
-msgstr "Search for and enter the object's motif."
+msgid "Pesquise e insira, se existir, o ornamento retratado no objeto."
+msgstr "Search for and enter the object's ornament."
 
 #: templates/item.html:191
-msgid "Motivos"
-msgstr "Motifs"
+msgid "Ornamentos"
+msgstr "Ornaments"
 
 #: templates/item.html:196
-msgid "Adicionar motivo"
-msgstr "Add motif"
+msgid "Adicionar ornamento"
+msgstr "Add ornament"
 
 #: templates/item.html:199
 msgid "Adicionar"
@@ -391,12 +391,12 @@ msgstr "Category"
 #: templates/item.html:298
 msgid ""
 "Escolha qual categoria de <a target=\"_blank\" "
-"href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
-"title='Motivo (artes plásticas)'>motivo</a> deseja declarar:"
+"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' "
+"title='Ornamento (arte)'>ornamento</a> deseja declarar:"
 msgstr ""
 "Choose which category of <a target=\"_blank\" "
-"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' title='Motif "
-"(visual arts)'>motif</a> you want to declare:"
+"href='https://en.wikipedia.org/wiki/Ornament_(art)' title='Ornament "
+"(art)'>ornament</a> you want to declare:"
 
 #: templates/item.html:308
 msgid "Elementos da natureza"
@@ -421,31 +421,31 @@ msgstr "Others"
 #: templates/item.html:351
 msgid ""
 "Se o objeto possui um <a target=\"_blank\" "
-"href='https://pt.wikipedia.org/wiki/Motivo_(artes_plásticas)' "
-"title='Motivo (artes plásticas)'>motivo</a> identificável nas imagens "
+"href='https://pt.wikipedia.org/wiki/Ornamento_(arte)' "
+"title='Ornamento (arte)'>ornamento</a> identificável nas imagens "
 "disponíveis, pesquise-a pelo nome no banco de dados."
 msgstr ""
 "If the object has a identifiable <a target=\"_blank\" "
-"href='https://en.wikipedia.org/wiki/Motif_(visual_arts)' title='Motif "
-"(visual arts)'>motif</a>  in the images available, search it by the name "
+"href='https://en.wikipedia.org/wiki/Ornament_(art)' title='Ornament "
+"(art)'>ornament</a>  in the images available, search it by the name "
 "in the database."
 
 #: templates/item.html:352
 msgid ""
-"Caso o motivo não esteja cadastrado, selecione a opção <i>\"Informar "
-"motivo faltante\"</i>."
+"Caso o ornamento não esteja cadastrado, selecione a opção <i>\"Informar "
+"ornamento faltante\"</i>."
 msgstr ""
-"If the motif is not registered, select the option <i>\"Inform missing "
-"motif\"</i>. "
+"If the ornament is not registered, select the option <i>\"Inform missing "
+"ornament\"</i>. "
 
 #: templates/item.html:353
-msgid "Nos casos em que o objeto não possua um motivo, selecione a opção"
-msgstr "In cases where the object does not have a motif, select the option"
+msgid "Nos casos em que o objeto não possua um ornamento, selecione a opção"
+msgstr "In cases where the object does not have a ornament, select the option"
 
 #: templates/item.html:354 templates/item.html:374 templates/item.html:432
 #: templates/item.html:489 templates/item.html:520
-msgid "Objeto não apresenta motivos"
-msgstr "Object has no motif"
+msgid "Objeto não apresenta ornamentos"
+msgstr "Object has no ornaments"
 
 #: templates/item.html:357
 msgid "Pesquise"
@@ -457,8 +457,8 @@ msgstr "Select an option:"
 
 #: templates/item.html:370 templates/item.html:431 templates/item.html:488
 #: templates/item.html:519
-msgid "Informar motivo faltante"
-msgstr "Report missing motif"
+msgid "Informar ornamento faltante"
+msgstr "Report missing ornament"
 
 #: templates/item.html:381
 msgid "Adicionar declaração"
@@ -518,9 +518,9 @@ msgid ""
 "A curadoria de acervo é uma das atividades mais importantes do museu. "
 "Nela, pesquisadoras e pesquisadores -- e agora você! -- se debruçam sobre"
 " os objetos da coleção para identificar sua procedência, o que retrata, a"
-" história da peça. No aplicativo <b>Wiki Museu do Ipiranga - O que "
-"retrata?</b>, você participa desse trabalho de curadoria, identificando "
-"os motivos representados em objetos do acervo do Museu do Ipiranga."
+" história da peça. No aplicativo <b>Wiki Museu do Ipiranga - Qual o "
+"ornamento?</b>, você participa desse trabalho de curadoria, identificando "
+"os ornamentos representados em objetos do acervo do Museu do Ipiranga."
 msgstr ""
 "Curating the collection is one of the most important activities of the "
 "museum. Here, researchers -- and now you! -- look at the objects in the "
